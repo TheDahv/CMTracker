@@ -9,6 +9,7 @@ gem 'pg'
 gem 'haml-rails'
 gem 'sass'
 gem 'compass', ">=0.11.5"
+gem 'devise'
 
 # Use unicorn as the web server
 # gem 'unicorn'

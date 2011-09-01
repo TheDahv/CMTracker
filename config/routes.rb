@@ -1,4 +1,7 @@
 CMTracker::Application.routes.draw do
+  devise_for :volunteers
+  get "volunteers" => "volunteers#index"
+
   resources :attendances
   resources :services
   resources :classrooms

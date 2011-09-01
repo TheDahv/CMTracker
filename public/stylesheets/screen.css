@@ -67,7 +67,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 22, ../../app/stylesheets/screen.scss */
+/* line 23, ../../app/stylesheets/screen.scss */
 * {
   color: #3f4342;
   text-align: center;
@@ -82,46 +82,51 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   font-size: 18px;
 }
 
-/* line 29, ../../app/stylesheets/screen.scss */
+/* line 30, ../../app/stylesheets/screen.scss */
 p {
   padding: 12px 0;
 }
 
-/* line 33, ../../app/stylesheets/screen.scss */
-h1 {
-  font-size: 36px;
+/* line 34, ../../app/stylesheets/screen.scss */
+h1, h2, h3, h4, h5 {
   font-family: 'Lobster Two', Serif;
+  text-align: left;
 }
 
-/* line 38, ../../app/stylesheets/screen.scss */
+/* line 39, ../../app/stylesheets/screen.scss */
+h1 {
+  font-size: 36px;
+}
+
+/* line 43, ../../app/stylesheets/screen.scss */
 header {
   text-align: center;
   background-color: #fa9020;
   height: 150px;
   padding-top: 16px;
 }
-/* line 45, ../../app/stylesheets/screen.scss */
+/* line 50, ../../app/stylesheets/screen.scss */
 header h1 {
   margin-bottom: 80px;
+  text-align: center;
 }
-/* line 50, ../../app/stylesheets/screen.scss */
+/* line 56, ../../app/stylesheets/screen.scss */
 header nav ul {
   list-style: none;
 }
-/* line 52, ../../app/stylesheets/screen.scss */
+/* line 58, ../../app/stylesheets/screen.scss */
 header nav ul li {
   display: inline;
 }
 
-/* line 59, ../../app/stylesheets/screen.scss */
+/* line 65, ../../app/stylesheets/screen.scss */
 #main {
   padding-top: 1.333em;
   width: 960px;
   margin: 0 auto;
   text-align: left;
 }
-/* line 66, ../../app/stylesheets/screen.scss */
+/* line 72, ../../app/stylesheets/screen.scss */
 #main h1 {
   font-size: 28px;
-  text-align: left;
 }

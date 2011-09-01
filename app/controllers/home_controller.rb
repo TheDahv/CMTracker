@@ -4,8 +4,8 @@ class HomeController < ApplicationController
       puts params[:class_id]
       puts params[:service_id]
 
-      @children = Classroom.find(params[:class_id]).children 
-      @selected_class = params[:class_id]
+      @children = Classroom.find(params[:class_id]).children unless params[:class_id].nil? 
+      @selected_class = params[:class_id] unless params[:class_id].nil?
     end
 
     @services = Service.where('service_date >= ?', Date.today)
