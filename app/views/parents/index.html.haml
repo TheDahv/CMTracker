@@ -1,0 +1,25 @@
+%h1 Listing parents
+
+%table
+  %tr
+    %th First name
+    %th Last name
+    %th Email
+    %th Phone
+    %th
+    %th
+    %th
+
+  - @parents.each do |parent|
+    %tr
+      %td= parent.first_name
+      %td= parent.last_name
+      %td= parent.email
+      %td= parent.phone
+      %td= link_to 'Show', parent
+      %td= link_to 'Edit', edit_parent_path(parent)
+      %td= link_to 'Destroy', parent, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Parent', new_parent_path

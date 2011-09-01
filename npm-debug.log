@@ -1,0 +1,576 @@
+info it worked if it ends with ok
+verbose cli [ 'node', '/usr/local/bin/npm', 'install', '-g', 'nide' ]
+info using npm@1.0.15
+info using node@v0.4.9
+verbose config file /home/dahv/.npmrc
+verbose config file /usr/local/etc/npmrc
+silly exec /usr/local/bin/node "/usr/local/lib/node_modules/npm/bin/npm-get-uid-gid.js" "nobody" 1000
+silly output from getuid/gid {"uid":65534,"gid":1000}
+silly output from getuid/gid 
+verbose into /usr/local/lib [ 'nide' ]
+verbose cache add [ 'nide', null ]
+info addNamed [ 'nide', '' ]
+verbose addNamed [ null, '' ]
+verbose GET nide
+verbose raw, before any munging nide
+verbose url resolving [ 'http://registry.npmjs.org/', './nide' ]
+verbose url resolved http://registry.npmjs.org/nide
+verbose url parsed { protocol: 'http:',
+verbose url parsed   slashes: true,
+verbose url parsed   host: 'registry.npmjs.org',
+verbose url parsed   hostname: 'registry.npmjs.org',
+verbose url parsed   href: 'http://registry.npmjs.org/nide',
+verbose url parsed   pathname: '/nide' }
+verbose response http://registry.npmjs.org/nide
+silly chunk {"_id":"nide","_rev":"3-f98e70829be2798bfcf2df019def4cb0","name":"nide","description":"Beautiful IDE for Node.js","dist-tags":{"latest":"0.1.0"},"versions":{"0.1.0":{"author":{"name":"Marco Aurelio"},"name":"nide","keywords":["ide","integrated","development","environment","editor","coding","tool"],"description":"Beautiful IDE for Node.js","version":"0.1.0","repository":{"url":""},"engines":{"node":"~v0.4.9"},"dependencies":{"nko":"~0.1.0","express":"~2.4.6","commander":"~0.1.0","findit":"~0.1.1","socket.io":"~0.7.9","node-uuid":"~1.2.0"},"bin":{"nide":"./main.js"},"devDependencies":{},"_npmJsonOpts":{"file":"/Users/coreh/.npm/nide/0.1.0/package/package.json","wscript":false,"contributors":false,"serverjs":true},"_id":"nide@0.1.0","scripts":{"start":"node server.js"},"_engineSupported":true,"_npmVersion":"1.0.24","_nodeVersion":"v0.4.9","_defaultsLoaded":true,"dist":{"shasum":"78ab9758bd9a475bba96ad8647adc192a9cec1e0","tarball":"http://registry.npmjs.org/nide/-/nide-0.1.0.tgz"},"maintainers":[{"name":"coreh","email":"thecoreh@gmail.com"}],"directories":{}}},"maintainers":[{"name":"coreh","email":"thecoreh@gmail.com"}],"time":{"0.1.0":"2011-08-28T23:33:02.437Z"},"author":{"name":"Marco Aurelio"},"repository":{"url":""}}
+silly get cb [ 200,
+silly get cb   { vary: 'Accept',
+silly get cb     server: 'CouchDB/1.1.0 (Erlang OTP/R14B03)',
+silly get cb     etag: '"49DQ79CHM6TQQNWKKUUHLC8IB"',
+silly get cb     date: 'Thu, 01 Sep 2011 04:12:49 GMT',
+silly get cb     'content-type': 'application/json',
+silly get cb     'content-length': '1237' } ]
+verbose mkdir done: /home/dahv/.npm/nide 755
+verbose GET nide/0.1.0
+verbose raw, before any munging nide/0.1.0
+verbose url resolving [ 'http://registry.npmjs.org/', './nide/0.1.0' ]
+verbose url resolved http://registry.npmjs.org/nide/0.1.0
+verbose url parsed { protocol: 'http:',
+verbose url parsed   slashes: true,
+verbose url parsed   host: 'registry.npmjs.org',
+verbose url parsed   hostname: 'registry.npmjs.org',
+verbose url parsed   href: 'http://registry.npmjs.org/nide/0.1.0',
+verbose url parsed   pathname: '/nide/0.1.0' }
+verbose response http://registry.npmjs.org/nide/0.1.0
+silly chunk {"author":{"name":"Marco Aurelio"},"name":"nide","keywords":["ide","integrated","development","environment","editor","coding","tool"],"description":"Beautiful IDE for Node.js","version":"0.1.0","repository":{"url":""},"engines":{"node":"~v0.4.9"},"dependencies":{"nko":"~0.1.0","express":"~2.4.6","commander":"~0.1.0","findit":"~0.1.1","socket.io":"~0.7.9","node-uuid":"~1.2.0"},"bin":{"nide":"./main.js"},"devDependencies":{},"_npmJsonOpts":{"file":"/Users/coreh/.npm/nide/0.1.0/package/package.json","wscript":false,"contributors":false,"serverjs":true},"_id":"nide@0.1.0","scripts":{"start":"node server.js"},"_engineSupported":true,"_npmVersion":"1.0.24","_nodeVersion":"v0.4.9","_defaultsLoaded":true,"dist":{"shasum":"78ab9758bd9a475bba96ad8647adc192a9cec1e0","tarball":"http://registry.npmjs.org/nide/-/nide-0.1.0.tgz"},"maintainers":[{"name":"coreh","email":"thecoreh@gmail.com"}],"directories":{}}
+silly get cb [ 200,
+silly get cb   { vary: 'Accept',
+silly get cb     server: 'CouchDB/1.1.0 (Erlang OTP/R14B03)',
+silly get cb     etag: '"49DQ79CHM6TQQNWKKUUHLC8IB"',
+silly get cb     date: 'Thu, 01 Sep 2011 04:12:50 GMT',
+silly get cb     'content-type': 'application/json',
+silly get cb     'content-length': '906' } ]
+verbose mkdir done: /home/dahv/.npm/nide/0.1.0 755
+verbose bin dist [ '0.4-ares1.7.4-ev4.4-openssl0.9.8o-v83.1.8.25-linux-2.6.38-11-generic',
+verbose bin dist   { shasum: '78ab9758bd9a475bba96ad8647adc192a9cec1e0',
+verbose bin dist     tarball: 'http://registry.npmjs.org/nide/-/nide-0.1.0.tgz' } ]
+verbose addRemoteTarball [ 'http://registry.npmjs.org/nide/-/nide-0.1.0.tgz',
+verbose addRemoteTarball   '78ab9758bd9a475bba96ad8647adc192a9cec1e0' ]
+verbose mkdir done: /tmp/npm-1314850370151/1314850370151-0.3575240431819111 755
+info fetch http://registry.npmjs.org/nide/-/nide-0.1.0.tgz
+verbose fetch to /tmp/npm-1314850370151/1314850370151-0.3575240431819111/tmp.tgz
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 34598
+info shasum 78ab9758bd9a475bba96ad8647adc192a9cec1e0
+info shasum /tmp/npm-1314850370151/1314850370151-0.3575240431819111/tmp.tgz
+verbose mkdir done: /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm 755
+verbose unpack_ uid, gid [ 1000, 1000 ]
+verbose unpackTarget /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/package
+silly gunzTarPerm modes [ '755', '644' ]
+verbose success gzip "--decompress" "--stdout" "/tmp/npm-1314850370151/1314850370151-0.3575240431819111/tmp.tgz"
+verbose success tar "-mvxpf" "-" "--no-same-owner" "-C" "/tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm"
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/deploy.conf
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/deploy
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/project.js
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/main.js
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/package.json
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/.gitignore
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/.npmignore
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/server.js
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/.nide/
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/.nide/1c32218c-79ea-441e-9174-e026917b3203
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/.nide/607da057-9f30-4a1e-b4a8-d8784235ff21
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/.nide/d973883a-c147-4812-aed7-6d13af36f351
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/.nide/2cc1558e-e0a6-4f39-bc90-a16fc3299c79
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/.nide/4ff7827a-ddd2-48e3-b175-932bdce9c00f
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/.nide/4a7cfd46-d4c7-4385-bba5-6673d2b8f0ff
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/.nide/e8aac2a5-c128-4f2f-8827-d86225968725
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/.nide/versions.json
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/index.html
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/img/
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/img/nide.png
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/img/documentation.png
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/img/file.png
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/img/galaxy.jpg
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/img/ajax-loader.gif
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/img/right-arrow.png
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/img/forward.png
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/img/down-arrow.png
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/img/backward.png
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/img/npm.png
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/img/search.png
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/img/npm-logo.png
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/img/remove.png
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/img/folder.png
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/img/add.png
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/img/create-folder.png
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/img/noise.png
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/img/project.png
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/img/folder-large.png
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/css/
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/css/codemirror.css
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/css/style.css
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/css/codemirror-default.css
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/jquery-1.6.2.min.js
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/transformjs.1.0.beta.2.js
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/modernizr-2.0.6.js
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/codemirror.js
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/nide.js
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/clike/
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/clike/index.html
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/clike/clike.js
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/rst/
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/rst/rst.js
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/rst/index.html
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/rst/rst.css
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/velocity/
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/velocity/velocity.js
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/velocity/index.html
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/stex/
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/stex/stex.js
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/stex/index.html
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/plsql/
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/plsql/plsql.js
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/plsql/index.html
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/css/
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/css/css.js
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/css/index.html
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/haskell/
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/haskell/index.html
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/haskell/haskell.js
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/htmlmixed/
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/htmlmixed/htmlmixed.js
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/htmlmixed/index.html
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/yaml/
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/yaml/yaml.js
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/yaml/index.html
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/php/
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/php/php.js
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/php/index.html
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/r/
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/r/r.js
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/r/LICENSE
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/r/index.html
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/sparql/
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/sparql/index.html
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/sparql/sparql.js
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/javascript/
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/javascript/javascript.js
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/javascript/index.html
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/coffeescript/
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/coffeescript/coffeescript.js
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/coffeescript/LICENSE
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/coffeescript/index.html
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/diff/
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/diff/diff.js
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/diff/diff.css
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/diff/index.html
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/scheme/
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/scheme/scheme.js
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/scheme/index.html
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/smalltalk/
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/smalltalk/smalltalk.js
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/smalltalk/index.html
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/xmlpure/
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/xmlpure/xmlpure.js
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/xmlpure/index.html
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/ruby/
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/ruby/ruby.js
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/ruby/LICENSE
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/ruby/index.html
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/lua/
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/lua/lua.js
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/lua/index.html
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/python/
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/python/LICENSE.txt
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/python/python.js
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/python/index.html
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/xml/
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/xml/xml.js
+silly asyncMap in gTP /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package/public/js/mode/xml/index.html
+verbose gunzed /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package
+verbose rm'ed /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/package
+verbose renamed [ '/tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/___package.npm/package',
+verbose renamed   '/tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/package' ]
+silly testEngine { author: { name: 'Marco Aurelio' },
+silly testEngine   name: 'nide',
+silly testEngine   keywords: 
+silly testEngine    [ 'ide',
+silly testEngine      'integrated',
+silly testEngine      'development',
+silly testEngine      'environment',
+silly testEngine      'editor',
+silly testEngine      'coding',
+silly testEngine      'tool' ],
+silly testEngine   description: 'Beautiful IDE for Node.js',
+silly testEngine   version: '0.1.0',
+silly testEngine   repository: { url: '' },
+silly testEngine   engines: { node: '~v0.4.9' },
+silly testEngine   dependencies: 
+silly testEngine    { nko: '~0.1.0',
+silly testEngine      express: '~2.4.6',
+silly testEngine      commander: '~0.1.0',
+silly testEngine      findit: '~0.1.1',
+silly testEngine      'socket.io': '~0.7.9',
+silly testEngine      'node-uuid': '~1.2.0' },
+silly testEngine   bin: { nide: './main.js' },
+silly testEngine   devDependencies: {},
+silly testEngine   _npmJsonOpts: 
+silly testEngine    { file: '/tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/package/package.json',
+silly testEngine      wscript: false,
+silly testEngine      contributors: false,
+silly testEngine      serverjs: true },
+silly testEngine   _id: 'nide@0.1.0',
+silly testEngine   scripts: { start: 'node server.js' },
+silly testEngine   _engineSupported: false,
+silly testEngine   _npmVersion: '1.0.15',
+silly testEngine   _nodeVersion: 'v0.4.9',
+silly testEngine   _defaultsLoaded: true,
+silly testEngine   path: '/tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/package' }
+WARN Invalid range in engines.node.  Please see `npm help json` ~v0.4.9
+verbose caching /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/package/package.json
+verbose loadDefaults nide@0.1.0
+verbose tarball contents [ 'package' ]
+verbose from cache /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/package/package.json
+verbose pack /tmp/npm-1314850370151/1314850370151-0.3575240431819111/contents/package /home/dahv/.npm/nide/0.1.0/package.tgz
+verbose mkdir'ed /home/dahv/.npm/nide/0.1.0
+verbose tar about to write tar and gzip it.
+silly tar args [ '-cvf',
+silly tar args   '-',
+silly tar args   'package/deploy.conf',
+silly tar args   'package/deploy',
+silly tar args   'package/project.js',
+silly tar args   'package/main.js',
+silly tar args   'package/package.json',
+silly tar args   'package/.gitignore',
+silly tar args   'package/.npmignore',
+silly tar args   'package/server.js',
+silly tar args   'package/.nide/607da057-9f30-4a1e-b4a8-d8784235ff21',
+silly tar args   'package/.nide/d973883a-c147-4812-aed7-6d13af36f351',
+silly tar args   'package/.nide/1c32218c-79ea-441e-9174-e026917b3203',
+silly tar args   'package/.nide/2cc1558e-e0a6-4f39-bc90-a16fc3299c79',
+silly tar args   'package/.nide/4a7cfd46-d4c7-4385-bba5-6673d2b8f0ff',
+silly tar args   'package/.nide/e8aac2a5-c128-4f2f-8827-d86225968725',
+silly tar args   'package/.nide/versions.json',
+silly tar args   'package/.nide/4ff7827a-ddd2-48e3-b175-932bdce9c00f',
+silly tar args   'package/public/index.html',
+silly tar args   'package/public/img/nide.png',
+silly tar args   'package/public/img/documentation.png',
+silly tar args   'package/public/img/file.png',
+silly tar args   'package/public/img/galaxy.jpg',
+silly tar args   'package/public/img/ajax-loader.gif',
+silly tar args   'package/public/img/right-arrow.png',
+silly tar args   'package/public/img/forward.png',
+silly tar args   'package/public/img/down-arrow.png',
+silly tar args   'package/public/img/backward.png',
+silly tar args   'package/public/img/npm.png',
+silly tar args   'package/public/img/search.png',
+silly tar args   'package/public/img/npm-logo.png',
+silly tar args   'package/public/img/remove.png',
+silly tar args   'package/public/img/folder.png',
+silly tar args   'package/public/img/add.png',
+silly tar args   'package/public/img/create-folder.png',
+silly tar args   'package/public/img/noise.png',
+silly tar args   'package/public/img/project.png',
+silly tar args   'package/public/img/folder-large.png',
+silly tar args   'package/public/css/codemirror.css',
+silly tar args   'package/public/css/style.css',
+silly tar args   'package/public/css/codemirror-default.css',
+silly tar args   'package/public/js/transformjs.1.0.beta.2.js',
+silly tar args   'package/public/js/modernizr-2.0.6.js',
+silly tar args   'package/public/js/codemirror.js',
+silly tar args   'package/public/js/nide.js',
+silly tar args   'package/public/js/jquery-1.6.2.min.js',
+silly tar args   'package/public/js/mode/rst/rst.js',
+silly tar args   'package/public/js/mode/rst/index.html',
+silly tar args   'package/public/js/mode/rst/rst.css',
+silly tar args   'package/public/js/mode/clike/index.html',
+silly tar args   'package/public/js/mode/clike/clike.js',
+silly tar args   'package/public/js/mode/xml/xml.js',
+silly tar args   'package/public/js/mode/xml/index.html',
+silly tar args   'package/public/js/mode/python/LICENSE.txt',
+silly tar args   'package/public/js/mode/python/python.js',
+silly tar args   'package/public/js/mode/python/index.html',
+silly tar args   'package/public/js/mode/velocity/velocity.js',
+silly tar args   'package/public/js/mode/velocity/index.html',
+silly tar args   'package/public/js/mode/stex/index.html',
+silly tar args   'package/public/js/mode/stex/stex.js',
+silly tar args   'package/public/js/mode/plsql/plsql.js',
+silly tar args   'package/public/js/mode/plsql/index.html',
+silly tar args   'package/public/js/mode/css/css.js',
+silly tar args   'package/public/js/mode/css/index.html',
+silly tar args   'package/public/js/mode/haskell/index.html',
+silly tar args   'package/public/js/mode/haskell/haskell.js',
+silly tar args   'package/public/js/mode/htmlmixed/htmlmixed.js',
+silly tar args   'package/public/js/mode/htmlmixed/index.html',
+silly tar args   'package/public/js/mode/yaml/yaml.js',
+silly tar args   'package/public/js/mode/yaml/index.html',
+silly tar args   'package/public/js/mode/php/php.js',
+silly tar args   'package/public/js/mode/php/index.html',
+silly tar args   'package/public/js/mode/sparql/index.html',
+silly tar args   'package/public/js/mode/sparql/sparql.js',
+silly tar args   'package/public/js/mode/r/LICENSE',
+silly tar args   'package/public/js/mode/r/r.js',
+silly tar args   'package/public/js/mode/r/index.html',
+silly tar args   'package/public/js/mode/javascript/javascript.js',
+silly tar args   'package/public/js/mode/javascript/index.html',
+silly tar args   'package/public/js/mode/coffeescript/coffeescript.js',
+silly tar args   'package/public/js/mode/coffeescript/LICENSE',
+silly tar args   'package/public/js/mode/coffeescript/index.html',
+silly tar args   'package/public/js/mode/diff/diff.js',
+silly tar args   'package/public/js/mode/diff/diff.css',
+silly tar args   'package/public/js/mode/diff/index.html',
+silly tar args   'package/public/js/mode/scheme/scheme.js',
+silly tar args   'package/public/js/mode/scheme/index.html',
+silly tar args   'package/public/js/mode/smalltalk/smalltalk.js',
+silly tar args   'package/public/js/mode/smalltalk/index.html',
+silly tar args   'package/public/js/mode/ruby/ruby.js',
+silly tar args   'package/public/js/mode/ruby/LICENSE',
+silly tar args   'package/public/js/mode/ruby/index.html',
+silly tar args   'package/public/js/mode/lua/lua.js',
+silly tar args   'package/public/js/mode/lua/index.html',
+silly tar args   'package/public/js/mode/xmlpure/xmlpure.js',
+silly tar args   'package/public/js/mode/xmlpure/index.html' ]
+verbose success tar -cvf - <file list elided>
+verbose success gzip "--stdout"
+verbose mkdir done: /home/dahv/.npm/nide/0.1.0/___package.npm 755
+verbose unpack_ uid, gid [ 1000, 1000 ]
+verbose unpackTarget /home/dahv/.npm/nide/0.1.0/package
+silly gunzTarPerm modes [ '755', '644' ]
+verbose success gzip "--decompress" "--stdout" "/home/dahv/.npm/nide/0.1.0/package.tgz"
+verbose success tar "-mvxpf" "-" "--no-same-owner" "-C" "/home/dahv/.npm/nide/0.1.0/___package.npm"
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/deploy.conf
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/deploy
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/project.js
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/main.js
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/package.json
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/.gitignore
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/.npmignore
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/server.js
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/.nide/
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/.nide/1c32218c-79ea-441e-9174-e026917b3203
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/.nide/607da057-9f30-4a1e-b4a8-d8784235ff21
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/.nide/d973883a-c147-4812-aed7-6d13af36f351
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/.nide/2cc1558e-e0a6-4f39-bc90-a16fc3299c79
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/.nide/4ff7827a-ddd2-48e3-b175-932bdce9c00f
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/.nide/4a7cfd46-d4c7-4385-bba5-6673d2b8f0ff
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/.nide/e8aac2a5-c128-4f2f-8827-d86225968725
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/.nide/versions.json
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/index.html
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/img/
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/img/nide.png
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/img/documentation.png
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/img/file.png
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/img/galaxy.jpg
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/img/ajax-loader.gif
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/img/right-arrow.png
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/img/forward.png
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/img/down-arrow.png
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/img/backward.png
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/img/npm.png
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/img/search.png
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/img/npm-logo.png
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/img/remove.png
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/img/folder.png
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/img/add.png
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/img/create-folder.png
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/img/noise.png
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/img/project.png
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/img/folder-large.png
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/css/
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/css/codemirror.css
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/css/style.css
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/css/codemirror-default.css
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/jquery-1.6.2.min.js
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/transformjs.1.0.beta.2.js
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/modernizr-2.0.6.js
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/codemirror.js
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/nide.js
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/rst/
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/rst/rst.js
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/rst/index.html
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/rst/rst.css
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/clike/
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/clike/index.html
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/clike/clike.js
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/python/
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/python/LICENSE.txt
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/python/python.js
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/python/index.html
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/xml/
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/xml/xml.js
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/xml/index.html
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/velocity/
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/velocity/velocity.js
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/velocity/index.html
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/stex/
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/stex/stex.js
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/stex/index.html
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/plsql/
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/plsql/plsql.js
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/plsql/index.html
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/css/
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/css/css.js
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/css/index.html
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/haskell/
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/haskell/index.html
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/haskell/haskell.js
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/htmlmixed/
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/htmlmixed/htmlmixed.js
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/htmlmixed/index.html
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/yaml/
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/yaml/yaml.js
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/yaml/index.html
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/php/
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/php/php.js
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/php/index.html
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/r/
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/r/r.js
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/r/LICENSE
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/r/index.html
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/sparql/
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/sparql/index.html
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/sparql/sparql.js
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/javascript/
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/javascript/javascript.js
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/javascript/index.html
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/coffeescript/
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/coffeescript/coffeescript.js
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/coffeescript/LICENSE
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/coffeescript/index.html
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/diff/
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/diff/diff.js
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/diff/diff.css
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/diff/index.html
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/scheme/
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/scheme/scheme.js
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/scheme/index.html
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/smalltalk/
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/smalltalk/smalltalk.js
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/smalltalk/index.html
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/xmlpure/
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/xmlpure/xmlpure.js
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/xmlpure/index.html
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/ruby/
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/ruby/ruby.js
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/ruby/LICENSE
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/ruby/index.html
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/lua/
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/lua/lua.js
+silly asyncMap in gTP /home/dahv/.npm/nide/0.1.0/___package.npm/package/public/js/mode/lua/index.html
+verbose gunzed /home/dahv/.npm/nide/0.1.0/___package.npm/package
+verbose rm'ed /home/dahv/.npm/nide/0.1.0/package
+verbose renamed [ '/home/dahv/.npm/nide/0.1.0/___package.npm/package',
+verbose renamed   '/home/dahv/.npm/nide/0.1.0/package' ]
+silly testEngine { author: { name: 'Marco Aurelio' },
+silly testEngine   name: 'nide',
+silly testEngine   keywords: 
+silly testEngine    [ 'ide',
+silly testEngine      'integrated',
+silly testEngine      'development',
+silly testEngine      'environment',
+silly testEngine      'editor',
+silly testEngine      'coding',
+silly testEngine      'tool' ],
+silly testEngine   description: 'Beautiful IDE for Node.js',
+silly testEngine   version: '0.1.0',
+silly testEngine   repository: { url: '' },
+silly testEngine   engines: { node: '~v0.4.9' },
+silly testEngine   dependencies: 
+silly testEngine    { nko: '~0.1.0',
+silly testEngine      express: '~2.4.6',
+silly testEngine      commander: '~0.1.0',
+silly testEngine      findit: '~0.1.1',
+silly testEngine      'socket.io': '~0.7.9',
+silly testEngine      'node-uuid': '~1.2.0' },
+silly testEngine   bin: { nide: './main.js' },
+silly testEngine   devDependencies: {},
+silly testEngine   _npmJsonOpts: 
+silly testEngine    { file: '/home/dahv/.npm/nide/0.1.0/package/package.json',
+silly testEngine      wscript: false,
+silly testEngine      contributors: false,
+silly testEngine      serverjs: true },
+silly testEngine   _id: 'nide@0.1.0',
+silly testEngine   scripts: { start: 'node server.js' },
+silly testEngine   _engineSupported: false,
+silly testEngine   _npmVersion: '1.0.15',
+silly testEngine   _nodeVersion: 'v0.4.9',
+silly testEngine   _defaultsLoaded: true,
+silly testEngine   dist: { shasum: 'ed5e81f1f9ec267d117c976f8424fac1d6e62797' } }
+WARN Invalid range in engines.node.  Please see `npm help json` ~v0.4.9
+verbose caching /home/dahv/.npm/nide/0.1.0/package/package.json
+verbose loadDefaults nide@0.1.0
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 40960
+silly updated sha bytes 37630
+info shasum ed5e81f1f9ec267d117c976f8424fac1d6e62797
+info shasum /home/dahv/.npm/nide/0.1.0/package.tgz
+verbose from cache /home/dahv/.npm/nide/0.1.0/package/package.json
+verbose chmod /home/dahv/.npm/nide/0.1.0/package.tgz 644
+silly resolved [ { author: { name: 'Marco Aurelio' },
+silly resolved     name: 'nide',
+silly resolved     keywords: 
+silly resolved      [ 'ide',
+silly resolved        'integrated',
+silly resolved        'development',
+silly resolved        'environment',
+silly resolved        'editor',
+silly resolved        'coding',
+silly resolved        'tool' ],
+silly resolved     description: 'Beautiful IDE for Node.js',
+silly resolved     version: '0.1.0',
+silly resolved     repository: { url: '' },
+silly resolved     engines: { node: '~v0.4.9' },
+silly resolved     dependencies: 
+silly resolved      { nko: '~0.1.0',
+silly resolved        express: '~2.4.6',
+silly resolved        commander: '~0.1.0',
+silly resolved        findit: '~0.1.1',
+silly resolved        'socket.io': '~0.7.9',
+silly resolved        'node-uuid': '~1.2.0' },
+silly resolved     bin: { nide: './main.js' },
+silly resolved     devDependencies: {},
+silly resolved     _npmJsonOpts: 
+silly resolved      { file: '/home/dahv/.npm/nide/0.1.0/package/package.json',
+silly resolved        wscript: false,
+silly resolved        contributors: false,
+silly resolved        serverjs: true },
+silly resolved     _id: 'nide@0.1.0',
+silly resolved     scripts: { start: 'node server.js' },
+silly resolved     _engineSupported: false,
+silly resolved     _npmVersion: '1.0.15',
+silly resolved     _nodeVersion: 'v0.4.9',
+silly resolved     _defaultsLoaded: true,
+silly resolved     dist: { shasum: 'ed5e81f1f9ec267d117c976f8424fac1d6e62797' } } ]
+info into /usr/local/lib nide@0.1.0
+info installOne nide@0.1.0
+verbose installOne cb nide@0.1.0
+ERR! Unsupported
+ERR! Not compatible with your version of node/npm: nide@0.1.0
+ERR! Required: {"node":"~v0.4.9"}
+ERR! Actual:   {"npm":"1.0.15","node":"v0.4.9"}
+ERR! 
+ERR! System Linux 2.6.38-11-generic
+ERR! command "node" "/usr/local/bin/npm" "install" "-g" "nide"
+verbose exit [ 1, true ]

@@ -1,0 +1,12 @@
+= form_tag(root_path, :method => :get, :class => :class_select) do |f|
+  = select_tag :service_id, options_for_select(@services.map { |s| [ s.service_date.strftime("%A %I:%M %p - %m/%d/%y"), s.id ] } )
+  - if defined? @selected_class then
+    = select_tag :class_id, options_for_select(@classrooms.map { |c| [ c.name, c.id ] }, @selected_class) 
+  - else
+    = select_tag :class_id, options_for_select(@classrooms.map { |c| [ c.name, c.id ] })
+  = submit_tag :update_class, :value => 'Show Class' 
+
+%p
+  Hello from the home page!
+%p
+  Organic sustainable lomo, +1 irony McSweeney's skateboard Portland PBR tattooed farm-to-table Terry Richardson Williamsburg. Organic farm-to-table wolf, next level shit put a bird on it freegan American Apparel Williamsburg chambray gentrify viral you probably haven't heard of them keffiyeh Cosby sweater. Pitchfork photo booth fuck, DIY cardigan messenger bag butcher Thundercats tofu you probably haven't heard of them whatever squid VHS put a bird on it. Thundercats fixie Williamsburg, photo booth synth vinyl dreamcatcher Wes Anderson cliche. You probably haven't heard of them DIY mlkshk biodiesel McSweeney's raw denim. Skateboard Pitchfork Etsy, photo booth messenger bag artisan raw denim beard Tumblr retro Austin. Wes Anderson sustainable keffiyeh, blog lomo craft beer cliche brunch homo skateboard biodiesel fanny pack Pitchfork you probably haven't heard of them Stumptown.

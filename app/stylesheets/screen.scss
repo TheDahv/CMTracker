@@ -1,0 +1,71 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+// Fonts
+$base-font-size: 18px;
+$base-line-height: 24px;
+
+@import "compass/typography";
+@import "compass/typography/vertical_rhythm";
+
+// Colors
+// Came from http://www.colourlovers.com/palette/1732175/vintage-4
+$river: #77CBD5;
+$orange: #FA9020;
+$windswept: #E4E2D3;
+$sinja_sova: #778381;
+$to_wear_in_winter: #3F4342;
+
+* {
+  @include establish-baseline($base-font-size);
+
+  color: $to_wear_in_winter;
+  text-align: center;
+}
+
+p {
+  padding: ($base-line-height / 2) 0;
+}
+
+h1 {
+  font-size: 36px;
+  font-family: 'Lobster Two', Serif;
+}
+
+header {
+  text-align: center;
+  background-color: $orange;
+  height: 150px;
+
+  padding-top: 16px;
+  
+  h1 {
+    margin-bottom: 80px;
+  }
+
+  nav {
+    ul {
+      list-style: none;
+      li {
+        display: inline;
+      }
+    }
+  }
+}
+
+#main {
+  @include padding-leader();
+
+  width: 960px;
+  margin: 0 auto;
+  text-align: left;
+
+  h1 {
+    font-size: 28px;
+    text-align: left;
+  }
+}

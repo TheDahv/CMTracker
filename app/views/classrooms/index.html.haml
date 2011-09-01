@@ -1,0 +1,19 @@
+%h1 Listing classrooms
+
+%table
+  %tr
+    %th Name
+    %th
+    %th
+    %th
+
+  - @classrooms.each do |classroom|
+    %tr
+      %td= classroom.name
+      %td= link_to 'Show', classroom
+      %td= link_to 'Edit', edit_classroom_path(classroom)
+      %td= link_to 'Destroy', classroom, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Classroom', new_classroom_path

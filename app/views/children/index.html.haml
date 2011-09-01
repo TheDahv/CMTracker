@@ -1,0 +1,25 @@
+%h1 Listing children
+
+%table
+  %tr
+    %th First name
+    %th Last name
+    %th Birthday
+    %th First day
+    %th
+    %th
+    %th
+
+  - @children.each do |child|
+    %tr
+      %td= child.first_name
+      %td= child.last_name
+      %td= child.birthday
+      %td= child.first_day
+      %td= link_to 'Show', child
+      %td= link_to 'Edit', edit_child_path(child)
+      %td= link_to 'Destroy', child, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Child', new_child_path

@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b First name:
+  = @parent.first_name
+%p
+  %b Last name:
+  = @parent.last_name
+%p
+  %b Email:
+  = @parent.email
+%p
+  %b Phone:
+  = @parent.phone
+
+= link_to 'Edit', edit_parent_path(@parent)
+\|
+= link_to 'Back', parents_path
