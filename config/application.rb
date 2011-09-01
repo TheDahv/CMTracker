@@ -42,5 +42,8 @@ module CMTracker
     config.generators do |g|
       g.template_engine :haml
     end    
+
+    # Turn on for rails-admin in Rails 3.1
+    # config.assets.enabled = true
   end
 end
