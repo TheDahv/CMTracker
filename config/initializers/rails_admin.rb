@@ -2,6 +2,13 @@ RailsAdmin.config do |config|
   # This setting is to keep things from slowing down in prod
   #config.reload_between_requests = false
 
+  # Fix for Heroku
+  # http://devcenter.heroku.com/articles/using-compass
+  project_type  = :rails
+  http_path     = '/'
+  css_dir       = 'tmp/stylesheets'
+  sass_dir      = 'app/view/stylesheets'
+
   # Sync it up with our model classes
   config.current_user_method do
     current_volunteer

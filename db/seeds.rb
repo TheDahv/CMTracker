@@ -62,10 +62,11 @@ end
 
 # Master Admin
 # !!! Change password in production
-Volunteer.create({ 
-  :first_name => 'Master', 
-  :last_name => 'Admin',
+v = Volunteer.create({ 
   :email => 'masteradmin@cmtracker.org',
-  :admin => true,
   :password => 'MasterPassword'
 })
+
+v.first_name = 'Master'
+v.last_name = 'Admin'
+v.admin = true
