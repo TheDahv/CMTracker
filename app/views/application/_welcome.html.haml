@@ -1,0 +1,4 @@
+- if volunteer_signed_in?
+  = link_to 'Sign Out', destroy_volunteer_session_path
+- else
+  = link_to 'Sign In', new_volunteer_session_path

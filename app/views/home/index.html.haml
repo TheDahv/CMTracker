@@ -12,6 +12,7 @@
       %p No kids in this class
     - else
       - @children.each do |c|
-        %p= c
+        %article
+          %span.field_heading= c
 - else
   %p Pick a class to list the students and check them in

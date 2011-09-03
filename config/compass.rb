@@ -6,9 +6,11 @@ project_type = :rails
 http_path = "/"
 
 # Heroku config
-css_dir = "tmp/stylesheets"
-sass_dir = "app/views/stylesheets"
 environment = Compass::AppIntegration::Rails.env
+if environment != :development
+  css_dir = "tmp/stylesheets"
+  sass_dir = "app/views/stylesheets"
+end
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed

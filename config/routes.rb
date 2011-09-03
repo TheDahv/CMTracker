@@ -1,5 +1,8 @@
 CMTracker::Application.routes.draw do
   devise_for :volunteers
+  devise_scope :volunteer do
+    match "volunteers/sign_out" => "devise/sessions#destroy"
+  end
   get "volunteers" => "volunteers#index"
 
   # Rails admin

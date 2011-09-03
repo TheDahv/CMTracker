@@ -40,6 +40,15 @@ h1 {
   font-size: 36px;
 }
 
+.welcome {
+  display: inline;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  float: right;
+  margin-right: 16px;
+}
+
 header {
   text-align: center;
   background-color: $orange;
@@ -51,7 +60,7 @@ header {
     margin-bottom: 80px;
     text-align: center;
   }
-
+ 
   nav {
     ul {
       list-style: none;

@@ -99,34 +99,44 @@ h1 {
 }
 
 /* line 43, ../../app/stylesheets/screen.scss */
+.welcome {
+  display: inline;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  float: right;
+  margin-right: 16px;
+}
+
+/* line 52, ../../app/stylesheets/screen.scss */
 header {
   text-align: center;
   background-color: #fa9020;
   height: 150px;
   padding-top: 16px;
 }
-/* line 50, ../../app/stylesheets/screen.scss */
+/* line 59, ../../app/stylesheets/screen.scss */
 header h1 {
   margin-bottom: 80px;
   text-align: center;
 }
-/* line 56, ../../app/stylesheets/screen.scss */
+/* line 65, ../../app/stylesheets/screen.scss */
 header nav ul {
   list-style: none;
 }
-/* line 58, ../../app/stylesheets/screen.scss */
+/* line 67, ../../app/stylesheets/screen.scss */
 header nav ul li {
   display: inline;
 }
 
-/* line 65, ../../app/stylesheets/screen.scss */
+/* line 74, ../../app/stylesheets/screen.scss */
 #main {
   padding-top: 1.333em;
   width: 960px;
   margin: 0 auto;
   text-align: left;
 }
-/* line 72, ../../app/stylesheets/screen.scss */
+/* line 81, ../../app/stylesheets/screen.scss */
 #main h1 {
   font-size: 28px;
 }
