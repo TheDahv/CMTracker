@@ -12,6 +12,7 @@ namespace :bootstrap do
     v.password = 'MasterPassword'
     v.first_name = 'Master'
     v.last_name = 'Admin'
+    v.admin = true
     v.save
   end
 
