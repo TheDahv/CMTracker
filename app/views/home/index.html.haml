@@ -6,6 +6,11 @@
     = select_tag :class_id, options_for_select(@classrooms.map { |c| [ c.name, c.id ] })
   = submit_tag :update_class, :value => 'Show Class' 
 
+- if defined? @children
+  %section.child_listing
+    - @children.each do |c|
+      %p= c
+
 %p
   Hello from the home page!
 %p

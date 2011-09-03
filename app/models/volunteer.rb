@@ -12,4 +12,8 @@ class Volunteer < ActiveRecord::Base
   def to_s
     "#{ first_name } #{ last_name }"  
   end
+
+  def is_admin?
+    admin
+  end
 end

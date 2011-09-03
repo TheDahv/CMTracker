@@ -60,4 +60,12 @@ seed_date = DateTime.civil(2011, 9, 4)
   end
 end
 
-
+# Master Admin
+# !!! Change password in production
+Volunteer.create({ 
+  :first_name => 'Master', 
+  :last_name => 'Admin',
+  :email => 'masteradmin@cmtracker.org',
+  :admin => true,
+  :password => 'MasterPassword'
+})

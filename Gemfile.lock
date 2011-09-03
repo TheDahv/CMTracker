@@ -1,3 +1,13 @@
+GIT
+  remote: git://github.com/sferik/rails_admin.git
+  revision: 77b45592f4bbcc182294e4281147671c74a9179d
+  branch: rails-3.0
+  specs:
+    rails_admin (0.0.1)
+      builder (~> 2.1.0)
+      haml (>= 3.1.0, < 3.3.0)
+      rails (~> 3.0.10)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -42,6 +52,7 @@ GEM
       warden (~> 1.0.3)
     erubis (2.6.6)
       abstract (>= 1.0.0)
+    fastercsv (1.5.4)
     fssm (0.2.7)
     haml (3.1.2)
     haml-rails (0.3.4)
@@ -95,7 +106,9 @@ PLATFORMS
 DEPENDENCIES
   compass (>= 0.11.5)
   devise
+  fastercsv
   haml-rails
   pg
   rails (= 3.0.10)
+  rails_admin!
   sass

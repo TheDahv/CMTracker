@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110901192555) do
+ActiveRecord::Schema.define(:version => 20110902144201) do
 
   create_table "attendances", :force => true do |t|
     t.integer  "service_id"
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(:version => 20110901192555) do
   create_table "children", :force => true do |t|
     t.string   "first_name"
     t.string   "last_name"
-    t.datetime "birthday"
+    t.date     "birthday"
     t.integer  "classroom_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -48,6 +48,19 @@ ActiveRecord::Schema.define(:version => 20110901192555) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "rails_admin_histories", :force => true do |t|
+    t.string   "message"
+    t.string   "username"
+    t.integer  "item"
+    t.string   "table"
+    t.integer  "month",      :limit => 2
+    t.integer  "year",       :limit => 8
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "rails_admin_histories", ["item", "table", "month", "year"], :name => "index_rails_admin_histories"
 
   create_table "services", :force => true do |t|
     t.datetime "service_date"

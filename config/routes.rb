@@ -2,6 +2,9 @@ CMTracker::Application.routes.draw do
   devise_for :volunteers
   get "volunteers" => "volunteers#index"
 
+  # Rails admin
+  #mount RailsAdmin::Engine => 'admin', :as => 'rails_admin'
+
   resources :attendances
   resources :services
   resources :classrooms

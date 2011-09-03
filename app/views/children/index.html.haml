@@ -5,7 +5,6 @@
     %th First name
     %th Last name
     %th Birthday
-    %th First day
     %th
     %th
     %th
@@ -15,7 +14,6 @@
       %td= child.first_name
       %td= child.last_name
       %td= child.birthday
-      %td= child.first_day
       %td= link_to 'Show', child
       %td= link_to 'Edit', edit_child_path(child)
       %td= link_to 'Destroy', child, :confirm => 'Are you sure?', :method => :delete
