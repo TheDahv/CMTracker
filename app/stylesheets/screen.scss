@@ -20,6 +20,9 @@ $windswept: #E4E2D3;
 $sinja_sova: #778381;
 $to_wear_in_winter: #3F4342;
 
+// Links
+@import "compass/typography/links/hover-link";
+
 * {
   @include establish-baseline($base-font-size);
 
@@ -32,7 +35,7 @@ p {
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: 'Lobster Two', Serif;
+  font-family: 'Cabin Sketch', Serif;
   text-align: left;
 }
 
@@ -60,7 +63,11 @@ header {
     margin-bottom: 80px;
     text-align: center;
   }
- 
+  
+  a {
+    @include hover-link();
+  }
+
   nav {
     ul {
       list-style: none;
