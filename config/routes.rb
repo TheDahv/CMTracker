@@ -1,4 +1,6 @@
 CMTracker::Application.routes.draw do
+  resources :checkins
+
   devise_for :volunteers
   devise_scope :volunteer do
     match "volunteers/sign_out" => "devise/sessions#destroy"
@@ -12,8 +14,10 @@ CMTracker::Application.routes.draw do
   resources :services
   resources :classrooms
   resources :parents
+  get "children/checkin" => "children#checkin"
+  get "children/checkout" => "children#checkout"
   resources :children
-
+  
   root :to => "home#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  checkin_time: 2011-09-05 05:11:55
+  checkout_time: 2011-09-05 05:11:55
+  pager: 
+  volunteer: 
+  child: 
+
+two:
+  checkin_time: 2011-09-05 05:11:55
+  checkout_time: 2011-09-05 05:11:55
+  pager: 
+  volunteer: 
+  child: 

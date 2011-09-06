@@ -9,19 +9,31 @@
     /[if IE]
       = stylesheet_link_tag 'ie.css', :media => 'screen, projection'
     = javascript_include_tag 'jquery-1.6.2.min'
+    = javascript_include_tag 'application'
     = csrf_meta_tag
   %body
     %header
-      %h1 CM Tracker
-      %h4.welcome= render 'application/welcome'
-      %nav
-        %ul
-          %li
-            = link_to('home', root_path)
-          %li
-            = link_to('children', children_path)
-          %li 
-            = link_to('reports', root_path)
+      = link_to root_path do
+        = image_tag('logos/MHK_Kids_logo_BIRD_transparent.png')
+      .header_controls
+        %h1 CM Tracker
+        %h4.welcome= render 'application/welcome'
+        %nav
+          %ul
+            %li
+              = link_to('home', root_path)
+              \|
+            %li
+              = link_to('check in', '/children/checkin') 
+              \|
+            %li
+              = link_to('check out', '/children/checkout')
+              \|
+            %li
+              = link_to('children', children_path)
+              \|
+            %li 
+              = link_to('reports', root_path)
     #main
       %p.notice= notice
       %p.alert= alert

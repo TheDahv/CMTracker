@@ -1,0 +1,27 @@
+%h1 Listing checkins
+
+%table
+  %tr
+    %th Checkin time
+    %th Checkout time
+    %th Pager
+    %th Volunteer
+    %th Child
+    %th
+    %th
+    %th
+
+  - @checkins.each do |checkin|
+    %tr
+      %td= checkin.checkin_time
+      %td= checkin.checkout_time
+      %td= checkin.pager
+      %td= checkin.volunteer
+      %td= checkin.child
+      %td= link_to 'Show', checkin
+      %td= link_to 'Edit', edit_checkin_path(checkin)
+      %td= link_to 'Destroy', checkin, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Checkin', new_checkin_path

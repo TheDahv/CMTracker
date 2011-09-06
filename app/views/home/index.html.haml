@@ -1,18 +1,2 @@
-= form_tag(root_path, :method => :get, :class => :class_select) do |f|
-  = select_tag :service_id, options_for_select(@services.map { |s| [ s.service_date.strftime("%A %I:%M %p - %m/%d/%y"), s.id ] } )
-  - if defined? @selected_class then
-    = select_tag :class_id, options_for_select(@classrooms.map { |c| [ c.name, c.id ] }, @selected_class) 
-  - else
-    = select_tag :class_id, options_for_select(@classrooms.map { |c| [ c.name, c.id ] })
-  = submit_tag :update_class, :value => 'Show Class' 
-
-- if defined? @children
-  %section.child_listing
-    - if @children.count == 0
-      %p No kids in this class
-    - else
-      - @children.each do |c|
-        %article
-          %span.field_heading= c
-- else
-  %p Pick a class to list the students and check them in
+%ul
+  %li= link_to 'checkin', '/children/checkin'
