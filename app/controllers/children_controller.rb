@@ -80,36 +80,4 @@ class ChildrenController < ApplicationController
       format.xml  { head :ok }
     end
   end
-
-  def checkin
-    if (params.empty? == false)
-      class_id = params[:class_id]
-      service_id = params[:service_id]
-
-      @children = Child.joins("
-        LEFT OUTER JOIN checkins ON children.id = checkins.child_id 
-          AND checkins.classroom_id = #{ class_id }
-          AND service_id = #{ service_id }").
-        where({
-          'checkins.id' => nil, 
-          :classroom_id => class_id }) unless class_id.nil? || service_id.nil?
-
-      @selected_class = params[:class_id] unless params[:class_id].nil?
-      @selected_service = params[:service_id] unless params[:service_id].nil?
-    end
-
-    @services = Service.where('service_date >= ?', Date.today)
-    @classrooms = Classroom.all
-    @classrooms.pop # get rid of :all classroom
-
-    respond_to do |format|
-      format.html # children/checkin.html.haml
-    end
-  end
-
-  def checkout
-    respond_to do |format|
-      format.html # children/checkout.html.haml
-    end
-  end
 end

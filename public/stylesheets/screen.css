@@ -67,7 +67,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 35, ../../app/stylesheets/screen.scss */
+/* line 26, ../../app/stylesheets/screen.scss */
 * {
   color: #3f4342;
   text-align: center;
@@ -82,29 +82,23 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   font-size: 18px;
 }
 
-/* line 42, ../../app/stylesheets/screen.scss */
-body {
-  font-family: Helvetica, sans-serif;
-}
-
-/* line 46, ../../app/stylesheets/screen.scss */
+/* line 33, ../../app/stylesheets/screen.scss */
 p {
   padding: 12px 0;
 }
 
-/* line 50, ../../app/stylesheets/screen.scss */
+/* line 37, ../../app/stylesheets/screen.scss */
 h1, h2, h3, h4, h5 {
   font-family: 'Cabin Sketch', Serif;
   text-align: left;
 }
 
-/* line 55, ../../app/stylesheets/screen.scss */
+/* line 42, ../../app/stylesheets/screen.scss */
 h1 {
   font-size: 36px;
-  color: #00a2d9;
 }
 
-/* line 60, ../../app/stylesheets/screen.scss */
+/* line 46, ../../app/stylesheets/screen.scss */
 .welcome {
   display: inline;
   position: absolute;
@@ -114,97 +108,43 @@ h1 {
   margin-right: 16px;
 }
 
-/* line 69, ../../app/stylesheets/screen.scss */
+/* line 55, ../../app/stylesheets/screen.scss */
 header {
-  background-color: #eb8b2d;
-  height: 200px;
+  text-align: center;
+  background-color: #fa9020;
+  height: 150px;
   padding-top: 16px;
 }
-/* line 75, ../../app/stylesheets/screen.scss */
-header img {
-  float: left;
-  margin-left: 16px;
-}
-/* line 80, ../../app/stylesheets/screen.scss */
-header .header_controls {
-  float: left;
-  margin-left: 40px;
-}
-/* line 85, ../../app/stylesheets/screen.scss */
+/* line 62, ../../app/stylesheets/screen.scss */
 header h1 {
   margin-bottom: 80px;
-  color: #f5eb3e;
+  text-align: center;
 }
-/* line 90, ../../app/stylesheets/screen.scss */
+/* line 67, ../../app/stylesheets/screen.scss */
 header a {
   text-decoration: none;
-  color: #00a2d9;
 }
 /* line 4, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_hover-link.scss */
 header a:hover {
   text-decoration: underline;
 }
-/* line 96, ../../app/stylesheets/screen.scss */
+/* line 72, ../../app/stylesheets/screen.scss */
 header nav ul {
   list-style: none;
 }
-/* line 98, ../../app/stylesheets/screen.scss */
+/* line 74, ../../app/stylesheets/screen.scss */
 header nav ul li {
   display: inline;
 }
 
-/* line 105, ../../app/stylesheets/screen.scss */
+/* line 81, ../../app/stylesheets/screen.scss */
 #main {
-  clear: left;
   padding-top: 1.333em;
   width: 960px;
   margin: 0 auto;
   text-align: left;
 }
-/* line 113, ../../app/stylesheets/screen.scss */
+/* line 88, ../../app/stylesheets/screen.scss */
 #main h1 {
   font-size: 28px;
-}
-
-/* line 118, ../../app/stylesheets/screen.scss */
-.child_listing {
-  width: 80%;
-  padding: 20px 80px;
-}
-/* line 119, ../../app/stylesheets/screen.scss */
-.child_listing input[type='text'] {
-  width: 250px;
-  margin-bottom: 20px;
-  text-align: left;
-}
-/* line 127, ../../app/stylesheets/screen.scss */
-.child_listing article {
-  width: 200px;
-  height: 100px;
-  border: 1px solid black;
-  padding: 4px 4px;
-  float: left;
-  margin-left: 16px;
-  text-align: left;
-}
-/* line 136, ../../app/stylesheets/screen.scss */
-.child_listing article .field_heading {
-  font-weight: bold;
-}
-
-/* line 142, ../../app/stylesheets/screen.scss */
-.checkin_form {
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -o-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -khtml-border-radius: 10px;
-  border-radius: 10px;
-  background-color: #6fc7e5;
-  border: 4px solid #00a2d9;
-  width: 400px;
-  position: absolute;
-  top: 260px;
-  left: 35%;
-  display: none;
 }

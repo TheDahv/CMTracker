@@ -1,6 +1,5 @@
 class Volunteer < ActiveRecord::Base
   belongs_to :classroom
-  belongs_to :checkin
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
