@@ -20,6 +20,15 @@ $windswept: #E4E2D3;
 $sinja_sova: #778381;
 $to_wear_in_winter: #3F4342;
 
+$light_blue: #6FC7E5;
+$dark_blue: #00A2D9;
+$yellow: #F5EB3E;
+$orange: #EB8B2D;
+$white: #000;
+
+// Rounded corners
+@import "compass/css3/border-radius";
+
 // Links
 @import "compass/typography/links/hover-link";
 
@@ -28,6 +37,10 @@ $to_wear_in_winter: #3F4342;
 
   color: $to_wear_in_winter;
   text-align: center;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
 }
 
 p {
@@ -41,6 +54,7 @@ h1, h2, h3, h4, h5 {
 
 h1 {
   font-size: 36px;
+  color: $dark_blue;
 }
 
 .welcome {
@@ -53,19 +67,29 @@ h1 {
 }
 
 header {
-  text-align: center;
   background-color: $orange;
-  height: 150px;
+  height: 200px;
 
   padding-top: 16px;
   
+  img {
+    float: left;
+    margin-left: 16px;
+  }
+  
+  .header_controls {
+    float: left;
+    margin-left: 40px;
+  }
+
   h1 {
     margin-bottom: 80px;
-    text-align: center;
+    color: $yellow;
   }
   
   a {
     @include hover-link();
+    color: $dark_blue;
   }
 
   nav {
@@ -79,6 +103,7 @@ header {
 }
 
 #main {
+  clear: left;
   @include padding-leader();
 
   width: 960px;
@@ -89,3 +114,34 @@ header {
     font-size: 28px;
   }
 }
+
+.child_listing {
+  input[type='text'] {
+    width: 250px;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  width: 80%;
+  padding: 20px 80px;
+  article {
+    width: 200px;
+    height: 100px;
+    border: 1px solid black;
+    padding: 4px 4px;
+    float: left;
+    margin-left: 16px;
+    text-align: left;
+
+    .field_heading {
+      font-weight: bold;
+    }
+
+    input[type='button'] {
+      float: right;
+      margin-right: 4px;
+    }
+  } 
+}
+
+

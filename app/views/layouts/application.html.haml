@@ -8,20 +8,27 @@
     = stylesheet_link_tag 'print.css', :media => 'print'
     /[if IE]
       = stylesheet_link_tag 'ie.css', :media => 'screen, projection'
-    = javascript_include_tag 'jquery-1.6.2.min'
     = csrf_meta_tag
+    = javascript_include_tag 'rails'
+    = javascript_include_tag 'jquery-1.6.2.min'
+    = javascript_include_tag 'application'
   %body
     %header
-      %h1 CM Tracker
-      %h4.welcome= render 'application/welcome'
-      %nav
-        %ul
-          %li
-            = link_to('home', root_path)
-          %li
-            = link_to('children', children_path)
-          %li 
-            = link_to('reports', root_path)
+      = link_to root_path do
+        = image_tag('logos/MHK_Kids_logo_BIRD_transparent.png')
+      .header_controls
+        %h1 CM Tracker
+        %h4.welcome= render 'application/welcome'
+        %nav
+          %ul
+            %li
+              = link_to('home', root_path)
+              \|
+            %li
+              = link_to('children', children_path)
+              \|
+            %li 
+              = link_to('reports', root_path)
     #main
       %p.notice= notice
       %p.alert= alert

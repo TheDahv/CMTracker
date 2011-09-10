@@ -15,6 +15,7 @@ CMTracker::Application.routes.draw do
   resources :children
 
   root :to => "home#index"
+  post "processCheckin" => "home#processCheckin"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

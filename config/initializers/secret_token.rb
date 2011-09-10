@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-CMTracker::Application.config.secret_token = 'f871dfc8b0187662c7ace0f5afd5e44f54cbf5a61aa2805e65570747b7df34aedbcb1181a67006bf2d8b14e2f1ed5719d8fcb35eefe6e3248ea41393f834bc80'
+CMTracker::Application.config.secret_token = 'a0f750120344e2f16d51289d7b7cca95b4fffdd1f6bddca065e6ce2b3d9f6342dbfaf98f55790bff554d0fff1769a5a1a0c9ebc5e45bbcdebfef3eff7ff21705'

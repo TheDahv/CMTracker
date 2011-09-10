@@ -1,9 +1,14 @@
 = form_tag(root_path, :method => :get, :class => :class_select) do |f|
-  = select_tag :service_id, options_for_select(@services.map { |s| [ s.service_date.strftime("%A %I:%M %p - %m/%d/%y"), s.id ] } )
+  - if defined? @selected_service
+    = select_tag :service_id, options_for_select(@services.map { |s| [ s.service_date.strftime("%A %I:%M %p - %m/%d/%y"), s.id ] }, @selected_service )
+  - else
+    = select_tag :service_id, options_for_select(@services.map { |s| [ s.service_date.strftime("%A %I:%M %p - %m/%d/%y"), s.id ] })  
+
   - if defined? @selected_class then
     = select_tag :class_id, options_for_select(@classrooms.map { |c| [ c.name, c.id ] }, @selected_class) 
   - else
     = select_tag :class_id, options_for_select(@classrooms.map { |c| [ c.name, c.id ] })
+
   = submit_tag :update_class, :value => 'Show Class' 
 
 - if defined? @children
@@ -11,8 +16,11 @@
     - if @children.count == 0
       %p No kids in this class
     - else
+      %p
+        %input{:type => 'text', :id => 'child_search', :placeholder => 'Find a child'}
       - @children.each do |c|
         %article
           %span.field_heading= c
+          %input.checkin_button{:type => :button, :value => 'check in', :data => { :id => c.id }}
 - else
   %p Pick a class to list the students and check them in

@@ -1,2 +1,27 @@
-// Place your application-specific JavaScript functions and classes here
-// This file is automatically included by javascript_include_tag :defaults
+$(function () {
+  if (document.location.pathname === '/') {
+    $('.checkin_button').click(function (e) {
+      var child_id, service_id, classroom_id;
+      child_id = e.currentTarget.dataset['id'];
+
+      service_id = $('#service_id').val();
+      classroom_id = $('#class_id').val();
+
+      $.post('/processCheckin', 
+        {
+          service_id: service_id,
+          classroom_id: classroom_id,
+          child_id: child_id
+        },
+        function (data) {
+          if (data === 'OK') {
+            // Success! Remove kid record and do some kind of notification
+            $(e.currentTarget).parent().remove();
+          } else {
+            console.log(data);
+          }
+        }
+      );
+    });
+  }
+});
