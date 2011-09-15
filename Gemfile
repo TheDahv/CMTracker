@@ -13,6 +13,8 @@ gem 'devise'
 
 gem 'fastercsv'
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git', :branch => 'rails-3.0'
+
+gem 'jquery-rails', '>= 1.0.12'
 # Use unicorn as the web server
 # gem 'unicorn'
 
