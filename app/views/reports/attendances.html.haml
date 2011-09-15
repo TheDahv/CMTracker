@@ -1,0 +1,24 @@
+= form_tag('/reports/attendances', :method => :get, :class => :class_select) do |f|
+  %label(for='start_date') From
+  %input{:id => :start_date, :name => :start_date, :type => :text}
+
+  %label(for='end_date') to
+  %input{:id => :end_date, :name => :end_date, :type => :text}
+
+  Class: 
+  - if defined? @selected_class then
+    = select_tag :class_id, options_for_select(@classrooms.map { |c| [ c.name, c.id ] }, @selected_class) 
+  - else
+    = select_tag :class_id, options_for_select(@classrooms.map { |c| [ c.name, c.id ] }, 5)
+  %p
+    = submit_tag :update_class, :value => 'Show Attendances' 
+
+- if defined? @attendances
+  %section.child_listing
+    - if @attendances.count == 0
+      %p No attendances for this class 
+    - else
+      - @attendances.each do |a|
+        %article
+          %p= a.service_date
+          %p= a.count

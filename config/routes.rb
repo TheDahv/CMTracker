@@ -1,4 +1,8 @@
 CMTracker::Application.routes.draw do
+  get "reports/" => "reports#index"
+  get "reports/index"
+  get "reports/attendances"
+
   devise_for :volunteers
   devise_scope :volunteer do
     match "volunteers/sign_out" => "devise/sessions#destroy"
