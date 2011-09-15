@@ -21,6 +21,9 @@
       - @children.each do |c|
         %article
           %span.field_heading= c
-          %input.checkin_button{:type => :button, :value => 'check in', :data => { :id => c.id }}
+          - if c.attendances.select { |a| a.service_id == @selected_service.to_i }.count > 0
+            %p 'Checked in'
+          - else
+            %input.checkin_button{:type => :button, :value => 'check in', :data => { :id => c.id }}
 - else
   %p Pick a class to list the students and check them in

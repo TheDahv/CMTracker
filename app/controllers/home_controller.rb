@@ -6,12 +6,8 @@ class HomeController < ApplicationController
       service_id = params[:service_id]
       
       if classroom_id.nil? == false && service_id.nil? == false
-        @children = Child.joins("
-          LEFT OUTER JOIN attendances ON attendances.child_id = children.id 
-          AND attendances.service_id = #{ service_id }
-          AND attendances.classroom_id = #{ classroom_id }
-          ").where('attendances.id' => nil, :classroom_id => classroom_id)
-
+        # There needs to be a way to parameterize this
+        @children = Child.where(:classroom_id => classroom_id)
       end
       @selected_class = classroom_id unless classroom_id.nil?
       @selected_service = service_id unless service_id.nil?
@@ -27,8 +23,9 @@ class HomeController < ApplicationController
   end
 
   def processCheckin
+    puts params
     service_id = params[:service_id]
-    classroom_id = params[:class_id] 
+    classroom_id = params[:classroom_id] 
     child_id = params[:child_id]
 
     if service_id.nil? || classroom_id.nil? || child_id.nil? 
