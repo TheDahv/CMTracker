@@ -49,9 +49,9 @@ end
 start_month = 9
 start_day = 4
 
-seed_date = DateTime.civil(2011, 9, 4)
+seed_date = DateTime.civil(2010, 12, 19)
 
-(0..3).each do |x|
+(0..100).each do |x|
   # Create a seed date (x * 7) days into the future
   service_set = create_service_set(seed_date + (x * 7))
 

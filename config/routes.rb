@@ -12,6 +12,7 @@ CMTracker::Application.routes.draw do
   # Rails admin
   #mount RailsAdmin::Engine => 'admin', :as => 'rails_admin'
 
+  match "attendances/import" => "attendances#import"
   resources :attendances
   resources :services
   resources :classrooms

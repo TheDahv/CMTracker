@@ -1,4 +1,19 @@
 class AttendancesController < ApplicationController
+  def import
+    require 'dtcm_attendance_importer'
+
+    unless params.empty? || params[:file].nil? || params[:class_id].nil?
+      puts "Getting ready to parse"
+      file = params[:file].tempfile
+
+      DTCMAttendanceImporter.new(file, params[:class_id]).parse_file
+    end
+
+    @classrooms = Classroom.all
+    @classrooms.pop # gets rid of :all classroom 
+    
+  end
+
   # GET /attendances
   # GET /attendances.xml
   def index
