@@ -6,7 +6,6 @@ class HomeController < ApplicationController
       service_id = params[:service_id]
       
       if classroom_id.nil? == false && service_id.nil? == false
-        # There needs to be a way to parameterize this
         @children = Child.where(:classroom_id => classroom_id)
       end
       @selected_class = classroom_id unless classroom_id.nil?

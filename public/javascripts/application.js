@@ -14,9 +14,14 @@ $(function () {
           child_id: child_id
         },
         function (data) {
+          var targetButton = $(e.currentTarget);
+
           if (data === 'OK') {
-            // Success! Remove kid record and do some kind of notification
-            $(e.currentTarget).parent().remove();
+            // Success! 
+            // Add a notification
+            targetButton.before('<p>Checked in</p>');
+            targetButton.parent().addClass('checked_in');
+            targetButton.remove();
           } else {
             console.log(data);
           }

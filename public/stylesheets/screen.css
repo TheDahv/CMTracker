@@ -67,7 +67,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 35, ../../app/stylesheets/screen.scss */
+/* line 39, ../../app/stylesheets/screen.scss */
 * {
   color: #3f4342;
   text-align: center;
@@ -82,29 +82,29 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   font-size: 18px;
 }
 
-/* line 42, ../../app/stylesheets/screen.scss */
+/* line 46, ../../app/stylesheets/screen.scss */
 body {
   font-family: Helvetica, sans-serif;
 }
 
-/* line 46, ../../app/stylesheets/screen.scss */
+/* line 50, ../../app/stylesheets/screen.scss */
 p {
   padding: 12px 0;
 }
 
-/* line 50, ../../app/stylesheets/screen.scss */
+/* line 54, ../../app/stylesheets/screen.scss */
 h1, h2, h3, h4, h5 {
   font-family: 'Cabin Sketch', Serif;
   text-align: left;
 }
 
-/* line 55, ../../app/stylesheets/screen.scss */
+/* line 59, ../../app/stylesheets/screen.scss */
 h1 {
   font-size: 36px;
   color: #00a2d9;
 }
 
-/* line 60, ../../app/stylesheets/screen.scss */
+/* line 64, ../../app/stylesheets/screen.scss */
 .welcome {
   display: inline;
   position: absolute;
@@ -114,28 +114,28 @@ h1 {
   margin-right: 16px;
 }
 
-/* line 69, ../../app/stylesheets/screen.scss */
+/* line 73, ../../app/stylesheets/screen.scss */
 header {
   background-color: #eb8b2d;
   height: 200px;
   padding-top: 16px;
 }
-/* line 75, ../../app/stylesheets/screen.scss */
+/* line 79, ../../app/stylesheets/screen.scss */
 header img {
   float: left;
   margin-left: 16px;
 }
-/* line 80, ../../app/stylesheets/screen.scss */
+/* line 84, ../../app/stylesheets/screen.scss */
 header .header_controls {
   float: left;
   margin-left: 40px;
 }
-/* line 85, ../../app/stylesheets/screen.scss */
+/* line 89, ../../app/stylesheets/screen.scss */
 header h1 {
   margin-bottom: 80px;
   color: #f5eb3e;
 }
-/* line 90, ../../app/stylesheets/screen.scss */
+/* line 94, ../../app/stylesheets/screen.scss */
 header a {
   text-decoration: none;
   color: #00a2d9;
@@ -144,16 +144,16 @@ header a {
 header a:hover {
   text-decoration: underline;
 }
-/* line 96, ../../app/stylesheets/screen.scss */
+/* line 100, ../../app/stylesheets/screen.scss */
 header nav ul {
   list-style: none;
 }
-/* line 98, ../../app/stylesheets/screen.scss */
+/* line 102, ../../app/stylesheets/screen.scss */
 header nav ul li {
   display: inline;
 }
 
-/* line 105, ../../app/stylesheets/screen.scss */
+/* line 109, ../../app/stylesheets/screen.scss */
 #main {
   clear: left;
   padding-top: 1.333em;
@@ -161,23 +161,23 @@ header nav ul li {
   margin: 0 auto;
   text-align: left;
 }
-/* line 113, ../../app/stylesheets/screen.scss */
+/* line 117, ../../app/stylesheets/screen.scss */
 #main h1 {
   font-size: 28px;
 }
 
-/* line 118, ../../app/stylesheets/screen.scss */
+/* line 122, ../../app/stylesheets/screen.scss */
 .child_listing {
   width: 80%;
   padding: 20px 80px;
 }
-/* line 119, ../../app/stylesheets/screen.scss */
+/* line 123, ../../app/stylesheets/screen.scss */
 .child_listing input[type='text'] {
   width: 250px;
   margin-bottom: 20px;
   text-align: left;
 }
-/* line 127, ../../app/stylesheets/screen.scss */
+/* line 131, ../../app/stylesheets/screen.scss */
 .child_listing article {
   width: 200px;
   height: 100px;
@@ -187,12 +187,27 @@ header nav ul li {
   margin-left: 16px;
   text-align: left;
 }
-/* line 136, ../../app/stylesheets/screen.scss */
+/* line 140, ../../app/stylesheets/screen.scss */
 .child_listing article .field_heading {
   font-weight: bold;
 }
-/* line 140, ../../app/stylesheets/screen.scss */
+/* line 144, ../../app/stylesheets/screen.scss */
 .child_listing article input[type='button'] {
   float: right;
   margin-right: 4px;
+}
+
+/* line 151, ../../app/stylesheets/screen.scss */
+.checked_in {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #f5eb3e));
+  background-image: -webkit-linear-gradient(#ffffff, #f5eb3e);
+  background-image: -moz-linear-gradient(#ffffff, #f5eb3e);
+  background-image: -o-linear-gradient(#ffffff, #f5eb3e);
+  background-image: -ms-linear-gradient(#ffffff, #f5eb3e);
+  background-image: linear-gradient(#ffffff, #f5eb3e);
+}
+
+/* line 155, ../../app/stylesheets/screen.scss */
+#chart {
+  text-align: center;
 }

@@ -11,6 +11,9 @@
       = stylesheet_link_tag 'ie.css', :media => 'screen, projection'
     = csrf_meta_tag
     = javascript_include_tag :defaults
+    = javascript_include_tag :highcharts
+    /[if IE]
+      = javascript_include_tag :ie_high_charts
   %body
     %header
       = link_to root_path do

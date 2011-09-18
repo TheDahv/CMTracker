@@ -20,6 +20,7 @@ $windswept: #E4E2D3;
 $sinja_sova: #778381;
 $to_wear_in_winter: #3F4342;
 
+// Came from sampling the MH Kids logo
 $light_blue: #6FC7E5;
 $dark_blue: #00A2D9;
 $yellow: #F5EB3E;
@@ -31,6 +32,9 @@ $white: #000;
 
 // Links
 @import "compass/typography/links/hover-link";
+
+// Gradients
+@import "compass/css3/images";
 
 * {
   @include establish-baseline($base-font-size);
@@ -144,4 +148,10 @@ header {
   } 
 }
 
+.checked_in {
+  @include background-image(linear-gradient(white, $yellow));
+}
 
+#chart {
+  text-align: center;
+}
