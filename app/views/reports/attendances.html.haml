@@ -1,9 +1,9 @@
 = form_tag('/reports/attendances', :method => :get, :class => :class_select) do |f|
   %label(for='start_date') From
-  %input{:id => :start_date, :name => :start_date, :type => :text}
+  %input{:id => :start_date, :name => :start_date, :type => :text, :value => (@start_date.nil? ? '' : @start_date) } 
 
   %label(for='end_date') to
-  %input{:id => :end_date, :name => :end_date, :type => :text}
+  %input{:id => :end_date, :name => :end_date, :type => :text, :value => (@end_date.nil? ? '' : @end_date) }
 
   Class: 
   - if defined? @selected_class then
@@ -18,7 +18,5 @@
     - if @attendances.count == 0
       %p No attendances for this class 
     - else
-      - @attendances.each do |a|
-        %article
-          %p= a.service_date
-          %p= a.count
+      = high_chart('chart', @h)
+      %p &nbsp;

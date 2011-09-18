@@ -16,27 +16,43 @@ class ReportsController < ApplicationController
       unless class_id.nil? || start_date.nil? || end_date.nil? 
         if class_id.to_i == 5
           # Return attendances from all classes
-          puts "Attendances from all classes"
-          @attendances = Service.select("services.service_date, COUNT(services.service_date)").
-            joins("LEFT OUTER JOIN attendances ON services.id = attendances.service_id").
-            where({
-              :service_date => start_date..end_date
-            }).
-            group("services.service_date")
+          @attendances = Attendance.select("services.service_date, COUNT(service_id)").
+            joins("RIGHT OUTER JOIN services ON attendances.service_id = services.id").
+            where('services.service_date' => start_date..end_date).
+            group('services.service_date').
+            order('services.service_date')
         else
-          puts "Attendance from a specific class"
-          @attendances = Service.select("services.service_date, COUNT(services.service_date)").
-            joins("LEFT OUTER JOIN attendances ON services.id = attendances.service_id").
-            where({
-              :service_date => start_date..end_date,
-              "attendances.classroom_id" => class_id
-            }).
-            group("services.service_date")
+          @attendances = Attendance.select('services.service_date, COUNT(service_id)').
+            joins('RIGHT OUTER JOIN services ON attendances.service_id = services.id').
+            where('services.service_date' => start_date..end_date, :classroom_id => class_id).
+            group('services.service_date').
+            order('services.service_date')
         end
-        puts @attendances
-        # @children = Hash[Child.find(@attendances.map { |a| a.child_id }.uniq).map { |c| [c.id, c] }]
+        @h = HighChart.new('graph') do |f| 
+          f.title({:text => 'Attendances'})
+          f.chart(
+            :margin => [30, 20, 40, 20],
+            :type => 'line'
+          )
+
+          f.x_axis(
+            :categories => @attendances.map { |a| a.service_date }, #.strftime("%m/%d/%Y") },
+            :labels => { :rotation => 90 } 
+          )
+
+          f.y_axis(
+            :min => 0
+          )
+         
+          f.series(
+            :name => 'Attendances', 
+            :data => @attendances.map { |a| [a.service_date, a.count ] } #.strftime("%m/%d/%Y"), a.count] }
+          )
+        end 
 
         @selected_class = class_id
+        @start_date = start_date.strftime("%m/%d/%Y")
+        @end_date = end_date.strftime("%m/%d/%Y")
        end
 
    end
