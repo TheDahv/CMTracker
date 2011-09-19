@@ -1,4 +1,6 @@
 class ReportsController < ApplicationController
+  before_filter :authenticate_volunteer!
+
   def index
     @report_paths = ['attendances']
 

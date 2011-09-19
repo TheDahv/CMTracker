@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   before_filter :authenticate_volunteer!
+
   def index
     if (params.empty? == false)
       classroom_id = params[:class_id]

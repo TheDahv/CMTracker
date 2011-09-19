@@ -1,4 +1,6 @@
 class AttendancesController < ApplicationController
+  before_filter :authenticate_volunteer!
+
   def import
     require 'dtcm_attendance_importer'
 

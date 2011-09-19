@@ -1,4 +1,6 @@
 class ClassroomsController < ApplicationController
+  before_filter :authenticate_volunteer!
+
   # GET /classrooms
   # GET /classrooms.xml
   def index

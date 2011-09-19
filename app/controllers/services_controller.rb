@@ -1,4 +1,6 @@
 class ServicesController < ApplicationController
+  before_filter :authenticate_volunteer!
+
   # GET /services
   # GET /services.xml
   def index

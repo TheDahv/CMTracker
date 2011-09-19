@@ -1,4 +1,6 @@
 class ParentsController < ApplicationController
+  before_filter :authenticate_volunteer!
+
   # GET /parents
   # GET /parents.xml
   def index
