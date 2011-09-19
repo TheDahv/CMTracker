@@ -16,18 +16,19 @@ class ReportsController < ApplicationController
       unless class_id.nil? || start_date.nil? || end_date.nil? 
         if class_id.to_i == 5
           # Return attendances from all classes
-          @attendances = Attendance.select("services.service_date, COUNT(service_id)").
+          @attendances = Attendance.select("date_trunc('day', services.service_date) as service_date, COUNT(service_id)").
             joins("RIGHT OUTER JOIN services ON attendances.service_id = services.id").
             where('services.service_date' => start_date..end_date).
-            group('services.service_date').
-            order('services.service_date')
+            group("date_trunc('day', services.service_date)").
+            order("date_trunc('day', services.service_date)")
         else
-          @attendances = Attendance.select('services.service_date, COUNT(service_id)').
+          @attendances = Attendance.select("date_trunc('day', services.service_date) as service_date, COUNT(service_id)").
             joins('RIGHT OUTER JOIN services ON attendances.service_id = services.id').
             where('services.service_date' => start_date..end_date, :classroom_id => class_id).
-            group('services.service_date').
-            order('services.service_date')
+            group("date_trunc('day', services.service_date)").
+            order("date_trunc('day', services.service_date)")
         end
+
         @h = HighChart.new('graph') do |f| 
           f.title({:text => 'Attendances'})
           f.chart(
@@ -36,17 +37,18 @@ class ReportsController < ApplicationController
           )
 
           f.x_axis(
-            :categories => @attendances.map { |a| a.service_date }, #.strftime("%m/%d/%Y") },
+            :categories => @attendances.map { |a| a.service_date.to_date.strftime("%m/%d/%Y") },
             :labels => { :rotation => 90 } 
           )
 
           f.y_axis(
-            :min => 0
+            :min => 0,
+            :max => 60
           )
          
           f.series(
             :name => 'Attendances', 
-            :data => @attendances.map { |a| [a.service_date, a.count ] } #.strftime("%m/%d/%Y"), a.count] }
+            :data => @attendances.map { |a| [a.service_date.to_date.strftime("%m/%d/%Y"), a.count ] } 
           )
         end 
 
