@@ -12,8 +12,8 @@ class ReportsController < ApplicationController
   def attendances
     if params.empty? == false
       class_id = params[:class_id]
-      start_date = Date.parse(params[:start_date]) unless params[:start_date].nil?
-      end_date = Date.parse(params[:end_date]) unless params[:end_date].nil?
+      start_date = Date.strptime(params[:start_date], "%m/%d/%Y") unless params[:start_date].nil?
+      end_date = Date.strptime(params[:end_date], "%m/%d/%Y") unless params[:end_date].nil?
 
       unless class_id.nil? || start_date.nil? || end_date.nil? 
         if class_id.to_i == 5
