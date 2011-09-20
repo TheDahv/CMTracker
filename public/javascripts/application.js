@@ -1,4 +1,6 @@
 $(function () {
+  var filter;
+
   if (document.location.pathname === '/') {
     $('.checkin_button').click(function (e) {
       var child_id, service_id, classroom_id;
@@ -27,6 +29,22 @@ $(function () {
           }
         }
       );
+    });
+
+    filter = function (q) {
+      $('.child_listing > article').each(function () {
+        ($(this).text().search(new RegExp(q, 'i')) < 0) ? $(this).hide() : $(this).show();
+      });
+    };
+
+    $('#child_search').keyup(function (e) {
+      if (e.keyCode === 27 || $(this).val() === '') {
+        // handle esc. clear out text and bring back all kids
+        $('#child_search').val('');
+        $('.child_listing > article').show();        
+      } else {
+        filter($(this).val());  
+      }
     });
   }
 
