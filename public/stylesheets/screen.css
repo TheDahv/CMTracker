@@ -168,7 +168,6 @@ header nav ul li {
 
 /* line 122, ../../app/stylesheets/screen.scss */
 .child_listing {
-  width: 80%;
   padding: 20px 80px;
 }
 /* line 123, ../../app/stylesheets/screen.scss */
@@ -177,9 +176,9 @@ header nav ul li {
   margin-bottom: 20px;
   text-align: left;
 }
-/* line 131, ../../app/stylesheets/screen.scss */
+/* line 130, ../../app/stylesheets/screen.scss */
 .child_listing article {
-  width: 200px;
+  width: 220px;
   height: 100px;
   border: 1px solid black;
   padding: 4px 4px;
@@ -188,17 +187,17 @@ header nav ul li {
   margin-top: 16px;
   text-align: left;
 }
-/* line 141, ../../app/stylesheets/screen.scss */
+/* line 140, ../../app/stylesheets/screen.scss */
 .child_listing article .field_heading {
   font-weight: bold;
 }
-/* line 145, ../../app/stylesheets/screen.scss */
+/* line 144, ../../app/stylesheets/screen.scss */
 .child_listing article input[type='button'] {
   float: right;
   margin-right: 4px;
 }
 
-/* line 152, ../../app/stylesheets/screen.scss */
+/* line 151, ../../app/stylesheets/screen.scss */
 .checked_in {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #f5eb3e));
   background-image: -webkit-linear-gradient(#ffffff, #f5eb3e);
@@ -208,7 +207,7 @@ header nav ul li {
   background-image: linear-gradient(#ffffff, #f5eb3e);
 }
 
-/* line 156, ../../app/stylesheets/screen.scss */
+/* line 155, ../../app/stylesheets/screen.scss */
 #chart {
   text-align: center;
 }
