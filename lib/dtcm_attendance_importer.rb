@@ -36,7 +36,7 @@ class DTCMAttendanceImporter < ActiveRecord::Base
       end
 
       l.zip(dates).each do |attendance|
-        unless attendance[0].empty?
+        if attendance[0] == '1'
           puts "Record attendance for #{ name } on #{ attendance[1] } whose birthday is #{ bday }"
           att_date = attendance[1]
           target_date = DateTime.civil(att_date.year, att_date.month, att_date.day, 9)

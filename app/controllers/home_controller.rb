@@ -14,8 +14,7 @@ class HomeController < ApplicationController
     end
 
     @services = Service.where('service_date >= ?', Date.today)
-    @classrooms = Classroom.all
-    @classrooms.pop # get rid of :all classroom
+    @classrooms = Classroom.where("classrooms.name <> ?", 'All')
 
     respond_to do |format|
       format.html # home/index.html.haml
