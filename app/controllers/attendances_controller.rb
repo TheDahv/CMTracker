@@ -11,7 +11,7 @@ class AttendancesController < ApplicationController
       DTCMAttendanceImporter.new(file, params[:class_id]).parse_file
     end
 
-    @classrooms = Classroom.where("classrooms.name <> ?", "All")
+    @classrooms = Classroom.where("classrooms.name <> ?", "All").order(:id)
   end
 
   # GET /attendances

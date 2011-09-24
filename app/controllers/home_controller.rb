@@ -14,7 +14,7 @@ class HomeController < ApplicationController
     end
 
     @services = Service.where('service_date >= ?', Date.today)
-    @classrooms = Classroom.where("classrooms.name <> ?", 'All')
+    @classrooms = Classroom.where("classrooms.name <> ?", 'All').order(:id)
 
     respond_to do |format|
       format.html # home/index.html.haml
