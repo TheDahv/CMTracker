@@ -21,8 +21,8 @@ $(function () {
           if (data === 'OK') {
             // Success! 
             // Add a notification
-            targetButton.before('<p>Checked in</p>');
-            targetButton.parent().addClass("'checked_in'");
+            targetButton.before("<p>'Checked in'</p>");
+            targetButton.parent().addClass("checked_in");
             targetButton.remove();
           } else {
             console.log(data);
