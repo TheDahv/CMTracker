@@ -1,6 +1,6 @@
 class AddFieldsToParents < ActiveRecord::Migration
   def self.up
-    add_column :parents, :inactive, :boolean, :default => 0
+    add_column :parents, :inactive, :boolean, :default => false
     add_column :parents, :onthecity, :boolean
   end
 
