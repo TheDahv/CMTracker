@@ -27,7 +27,6 @@ class HomeController < ApplicationController
   end
 
   def processCheckin
-    puts params
     service_id = params[:service_id]
     classroom_id = params[:classroom_id] 
     child_id = params[:child_id]
