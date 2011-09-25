@@ -46,12 +46,15 @@ class DTCMAttendanceImporter < ActiveRecord::Base
           target_date = DateTime.civil(att_date.year, att_date.month, att_date.day, 9)
           
           service = Service.where(:service_date => target_date)[0]
+
+          child_id = child.id
+          service_id = service.id
         
           Attendance.create(
             :classroom_id => @class_id.to_i,
-            :child_id => child.id,
-            :service_id => service.id
-          ) unless @class_id.nil? || child.nil? || service.nil?
+            :child_id => child_id,
+            :service_id => service_id
+          ) unless @class_id.nil? || child_id.nil? || service_id.nil?
         end
       end
     end
