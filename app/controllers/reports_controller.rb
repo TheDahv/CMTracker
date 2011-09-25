@@ -20,13 +20,13 @@ class ReportsController < ApplicationController
           # Return attendances from all classes
           @attendances = Attendance.select("date_trunc('day', services.service_date) as service_date, COUNT(service_id)").
             joins("RIGHT OUTER JOIN services ON attendances.service_id = services.id").
-            where('services.service_date' => start_date..end_date).
+            where('services.service_date' => start_date..end_date, 'children.inactive' => false).
             group("date_trunc('day', services.service_date)").
             order("date_trunc('day', services.service_date)")
         else
           @attendances = Attendance.select("date_trunc('day', services.service_date) as service_date, COUNT(service_id)").
             joins('RIGHT OUTER JOIN services ON attendances.service_id = services.id').
-            where('services.service_date' => start_date..end_date, :classroom_id => class_id).
+            where('services.service_date' => start_date..end_date, :classroom_id => class_id, 'children.inactive' => false).
             group("date_trunc('day', services.service_date)").
             order("date_trunc('day', services.service_date)")
         end
