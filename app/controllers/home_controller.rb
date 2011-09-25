@@ -31,7 +31,8 @@ class HomeController < ApplicationController
     classroom_id = params[:classroom_id] 
     child_id = params[:child_id]
 
-    if service_id.nil? || classroom_id.nil? || child_id.nil? 
+    if service_id.nil? || classroom_id.nil? || child_id.nil? ||
+        service_id.empty? || classroom_id.empty? || child_id.empty?
       render :text => 'All fields required to process a checkin'
     else
       a = Attendance.new({
