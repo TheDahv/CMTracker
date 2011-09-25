@@ -4,6 +4,10 @@ class DTCMAttendanceImporter < ActiveRecord::Base
       raise ArgumentError, "Must pass a File object"
     end
 
+    if class_id.nil?
+      raise ArgumentError, "Must pass a class id"
+    end
+
     @file = file
     @class_id = class_id
   end
@@ -40,13 +44,14 @@ class DTCMAttendanceImporter < ActiveRecord::Base
           puts "Record attendance for #{ name } on #{ attendance[1] } whose birthday is #{ bday }"
           att_date = attendance[1]
           target_date = DateTime.civil(att_date.year, att_date.month, att_date.day, 9)
+          
           service = Service.where(:service_date => target_date)[0]
-
+        
           Attendance.create(
             :classroom_id => @class_id.to_i,
             :child_id => child.id,
             :service_id => service.id
-          )
+          ) unless @class_id.nil? || child.nil? || service.nil?
         end
       end
     end
