@@ -20,7 +20,7 @@
         %input{:type => 'text', :id => 'child_search', :placeholder => 'Find a child'}
       %br 
       - @children.each do |c|
-        - check_in_status = c.attendances.select { |a| a.service_id == @selected_service.to_i }.count > 0
+        - check_in_status = @existing_attendance_children.include?(c.id)
         %article{ :class => (check_in_status ? 'checked_in' : '') }
           %span.field_heading= c
           - if check_in_status

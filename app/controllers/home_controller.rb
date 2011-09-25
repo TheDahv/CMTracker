@@ -8,6 +8,11 @@ class HomeController < ApplicationController
       
       if classroom_id.nil? == false && service_id.nil? == false
         @children = Child.where(:classroom_id => classroom_id)
+
+        @existing_attendance_children = Attendance.where(
+          :classroom_id => classroom_id,
+          :service_id => service_id
+          ).map { |a| a.child_id }
       end
       @selected_class = classroom_id unless classroom_id.nil?
       @selected_service = service_id unless service_id.nil?
