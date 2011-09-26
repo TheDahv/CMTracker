@@ -13,6 +13,10 @@ class Volunteer < ActiveRecord::Base
     "#{ first_name } #{ last_name }"  
   end
 
+  def admin_label
+    to_s
+  end
+
   def is_admin?
     admin
   end

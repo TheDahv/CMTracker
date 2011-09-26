@@ -18,4 +18,13 @@ RailsAdmin.config do |config|
   config.authorize_with do 
     redirect_to root_path unless warden.user.is_admin?
   end
+
+  # Exclude the importer class from this scope
+  config.excluded_models << "DTCMAttendanceImporter"
+
+  config.label_methods = [:admin_label]
+
+  config.models do
+
+  end
 end

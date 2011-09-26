@@ -6,4 +6,8 @@ class Child < ActiveRecord::Base
   def to_s
     "#{ first_name } #{ last_name }"    
   end
+
+  def admin_label
+    to_s
+  end
 end
