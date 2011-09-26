@@ -21,6 +21,7 @@ CMTracker::Application.routes.draw do
 
   root :to => "home#index"
   post "processCheckin" => "home#processCheckin"
+  post "undoCheckin" => "home#undoCheckin"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

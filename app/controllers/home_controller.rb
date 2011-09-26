@@ -49,4 +49,28 @@ class HomeController < ApplicationController
     end
     
   end
+
+  def undoCheckin
+    service_id = params[:service_id]
+    classroom_id = params[:classroom_id] 
+    child_id = params[:child_id]
+
+    if service_id.nil? || classroom_id.nil? || child_id.nil? ||
+        service_id.empty? || classroom_id.empty? || child_id.empty?
+      render :text => 'All fields required to process a checkin'
+    else
+      begin
+        a = Attendance.where(
+          :service_id => service_id,
+          :classroom_id => classroom_id,
+          :child_id => child_id
+        )[0]
+
+        a.destroy
+        render :text => 'OK'
+      rescue
+        render :text => 'There were errors: #{ a.errors.to_a.join(", ")}'
+      end
+    end
+  end
 end
