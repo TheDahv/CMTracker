@@ -22,6 +22,7 @@ class HomeController < ApplicationController
     @classrooms = Classroom.where("classrooms.name <> ?", 'All').order(:id)
 
     respond_to do |format|
+      response.headers['Cache-Control'] = 'no-cache';
       format.html # home/index.html.haml
     end
   end
@@ -41,6 +42,7 @@ class HomeController < ApplicationController
         :child_id => child_id
       }) 
 
+      response.headers['Cache-Control'] = 'no-cache';
       if a.save
         render :text => 'OK'
       else
@@ -54,6 +56,8 @@ class HomeController < ApplicationController
     service_id = params[:service_id]
     classroom_id = params[:classroom_id] 
     child_id = params[:child_id]
+
+    response.headers['Cache-Control'] = 'no-cache';
 
     if service_id.nil? || classroom_id.nil? || child_id.nil? ||
         service_id.empty? || classroom_id.empty? || child_id.empty?
