@@ -7,7 +7,7 @@ class HomeController < ApplicationController
       service_id = params[:service_id]
       
       if classroom_id.nil? == false && service_id.nil? == false
-        @children = Child.where(:classroom_id => classroom_id)
+        @children = Child.where(:classroom_id => classroom_id).order(:first_name, :last_name)
 
         @existing_attendance_children = Attendance.where(
           :classroom_id => classroom_id,
