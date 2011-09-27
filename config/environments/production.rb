@@ -5,9 +5,10 @@ CMTracker::Application.configure do
   # Code is not reloaded between requests
   config.cache_classes = true
 
-  # Full error reports are disabled and caching is turned on
+  # Full error reports are disabled and caching is turned off. 
+  # We don't want no stinkin' caching
   config.consider_all_requests_local       = false
-  config.action_controller.perform_caching = true
+  config.action_controller.perform_caching = false
 
   # Specifies the header that your server uses for sending files
   config.action_dispatch.x_sendfile_header = "X-Sendfile"
