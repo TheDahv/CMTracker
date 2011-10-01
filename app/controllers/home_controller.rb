@@ -36,11 +36,10 @@ class HomeController < ApplicationController
         service_id.empty? || classroom_id.empty? || child_id.empty?
       render :text => 'All fields required to process a checkin'
     else
-      a = Attendance.new({
-        :service_id => service_id,
-        :classroom_id => classroom_id,
-        :child_id => child_id
-      }) 
+      a = Attendance.new
+      a.service_id = service_id
+      a.classroom_id = classroom_id
+      a.child_id = child_id
 
       response.headers['Cache-Control'] = 'no-cache';
       if a.save
