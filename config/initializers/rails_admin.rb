@@ -27,4 +27,27 @@ RailsAdmin.config do |config|
   config.models do
 
   end
+
+  config.model Child do
+    list do
+      field :id
+      field :first_name
+      field :last_name
+      field :birthday
+      field :age
+      field :classroom
+      field :notes
+      field :inactive
+    end
+
+    show do 
+      field :first_name
+      field :last_name
+      field :birthday
+      field :age
+      field :classroom
+      field :notes
+      field :inactive
+    end
+  end
 end
