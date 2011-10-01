@@ -5,4 +5,10 @@ class AttendanceTest < ActiveSupport::TestCase
   test "the truth" do
     assert true
   end
+
+  test "cannot save a blank attendance" do
+    a = Attendance.new
+    a = a.save
+    assert a == false
+  end
 end

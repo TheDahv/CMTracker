@@ -41,8 +41,10 @@ test:
   encoding: unicode
   database: CMTracker_test
   pool: 5
-  username: CMTracker
-  password:
+  username: cmtracker
+  password: cmtracker
+  host: localhost
+  port: 5432
 
 production:
   adapter: postgresql
