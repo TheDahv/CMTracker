@@ -1,8 +1,9 @@
 class ReportsController < ApplicationController
+  layout :choose_layout
   before_filter :authenticate_volunteer!
 
   def index
-    @report_paths = ['attendances']
+    @report_paths = ['attendances', 'roster']
 
     respond_to do |format|
       format.html
@@ -66,6 +67,36 @@ class ReportsController < ApplicationController
 
     respond_to do |format|
       format.html
+    end
+  end
+
+  def roster
+    @classrooms = Classroom.where('name <> ?', 'All').order(:id)
+
+    respond_to do |format|
+      format.html
+    end
+  end
+  
+  def roster_printout
+    unless params[:classroom_id].nil?
+      classroom_id = params[:classroom_id]
+
+      @children = Child.where("classroom_id = ? AND inactive = ?", classroom_id, false)
+      @classroom_name = Classroom.find(classroom_id).name
+    end
+
+    respond_to do |format|
+      format.html
+    end
+  end
+
+  private
+  def choose_layout
+    if action_name == 'roster_printout'
+      'roster_printout'
+    else
+      'application'
     end
   end
 

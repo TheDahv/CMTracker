@@ -224,3 +224,51 @@ header nav ul li {
 #sign_in_area h2 {
   text-align: center;
 }
+
+/* line 171, ../../app/stylesheets/screen.scss */
+.roster_printout {
+  text-align: center;
+}
+/* line 174, ../../app/stylesheets/screen.scss */
+.roster_printout table {
+  width: 700px;
+  margin: 20px auto;
+}
+/* line 178, ../../app/stylesheets/screen.scss */
+.roster_printout table thead h1, .roster_printout table thead h2 {
+  font-family: Helvetica, Arial, sans-serif;
+}
+/* line 181, ../../app/stylesheets/screen.scss */
+.roster_printout table thead h2 {
+  font-size: 1.6em;
+  line-height: 2.0em;
+}
+/* line 187, ../../app/stylesheets/screen.scss */
+.roster_printout table thead .title_row h1, .roster_printout table thead .title_row h2 {
+  text-align: center;
+}
+/* line 190, ../../app/stylesheets/screen.scss */
+.roster_printout table thead .title_row th {
+  padding: 6px;
+}
+/* line 195, ../../app/stylesheets/screen.scss */
+.roster_printout table thead .date_row {
+  font-weight: bold;
+}
+/* line 199, ../../app/stylesheets/screen.scss */
+.roster_printout table tbody tr > td:nth-child(2) {
+  text-align: right;
+}
+/* line 202, ../../app/stylesheets/screen.scss */
+.roster_printout table tbody .header_row > td {
+  font-weight: bold;
+  text-align: center;
+}
+/* line 206, ../../app/stylesheets/screen.scss */
+.roster_printout table tbody .header_row > td:nth-child(1) {
+  text-align: left;
+}
+/* line 207, ../../app/stylesheets/screen.scss */
+.roster_printout table tbody td {
+  border: 1px solid #000;
+}

@@ -1,0 +1,4 @@
+= form_tag('#', :method => :get, :id => :roster_form) do |f|
+  Print roster for class: 
+  = select_tag :class_id, options_for_select(@classrooms.map { |c| [c.name, c.id] })
+  = submit_tag :generate_roster, :value => 'Get Roster' 

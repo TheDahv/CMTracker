@@ -2,6 +2,8 @@ CMTracker::Application.routes.draw do
   get "reports/" => "reports#index"
   get "reports/index"
   get "reports/attendances"
+  get "reports/roster"
+  get "reports/roster_printout"
 
   devise_for :volunteers
   devise_scope :volunteer do

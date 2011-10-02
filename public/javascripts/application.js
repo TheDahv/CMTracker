@@ -95,9 +95,7 @@ $(function () {
         filter($(this).val());  
       }
     });
-  }
-
-  if (document.location.pathname === '/reports/attendances') {
+  } else if (document.location.pathname === '/reports/attendances') {
     $('#start_date, #end_date').datepicker({
       defaultDate: '+lw',
       changeMonth: true,
@@ -111,6 +109,16 @@ $(function () {
                                                 selectedDate, instance.settings );
         dates.not( this ).datepicker( "option", option, date );
       }
+    });
+  } else if (document.location.pathname === '/reports/roster') {
+    $('#roster_form').submit(function (e) {
+      var classroom_id = $('#class_id').val();
+      console.log(classroom_id);
+
+      window.open('/reports/roster_printout?classroom_id=' + classroom_id); 
+
+      e.preventDefault();
+      e.stopPropagation();
     });
   }
 });

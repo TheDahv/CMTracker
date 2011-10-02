@@ -1,0 +1,36 @@
+- if defined? @classroom_name && defined? @children
+  %table
+    %thead
+      %tr.title_row
+        %th(colspan=6)
+          %h1 MARS HILL CHURCH
+          %h2 Children's &amp; Youth Ministry
+      %tr
+        %th(colspan=4)
+          %h2= "DTCM #{ @classroom_name } Roster"
+        %th(colspan=2)
+          Mars Hill Church | 2333 Western Ave
+          %br
+          Seattle, WA 98121
+      %tr
+        %th(colspan=6) &nbsp;
+      %tr
+        %th.date_row(colspan=6) Date: ______________
+      %tr
+        %th(colspan=6) &nbsp;
+    %tbody
+      %tr.header_row
+        %td Child's Name
+        %td Age
+        %td Pgr #
+        %td Service
+        %td Checked In
+        %td Checked Out
+      - @children.each do |c|
+        %tr
+          %td= c.to_s
+          %td= c.age
+          %td &nbsp;
+          %td &nbsp;
+          %td &nbsp;
+          %td &nbsp;
