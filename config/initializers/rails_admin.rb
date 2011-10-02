@@ -24,10 +24,6 @@ RailsAdmin.config do |config|
 
   config.label_methods = [:admin_label]
 
-  config.models do
-
-  end
-
   config.model Child do
     list do
       field :id
