@@ -215,3 +215,12 @@ header nav ul li {
 #chart {
   text-align: center;
 }
+
+/* line 163, ../../app/stylesheets/screen.scss */
+#sign_in_area {
+  text-align: center;
+}
+/* line 166, ../../app/stylesheets/screen.scss */
+#sign_in_area h2 {
+  text-align: center;
+}
