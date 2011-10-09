@@ -1,3 +1,40 @@
-/* Welcome to Compass. Use this file to define print styles.
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+.roster_printout {
+  text-align: center;
+
+  table {
+    width: 700px;
+    margin: 20px auto;  
+    thead {
+      h1, h2 { 
+        font-family: Helvetica, Arial, sans-serif;
+      }
+      h2 {
+        font-size: 1.6em;
+        line-height: 2.0em;
+      }
+
+      .title_row {
+        h1, h2 {
+          text-align: center;
+        }
+        th {
+          padding: 6px;
+        }
+      }
+
+      .date_row { font-weight: bold; }
+    }
+
+    tbody {
+      tr > td:nth-child(2) {
+        text-align: right;
+      }
+      .header_row > td { 
+        font-weight: bold; 
+        text-align: center;
+      }
+      .header_row > td:nth-child(1) { text-align: left; }
+      td { border: 1px solid #000; }
+    }
+  }
+}
