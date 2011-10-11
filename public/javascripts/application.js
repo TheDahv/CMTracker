@@ -27,7 +27,6 @@ $(function () {
         },
         function (data) {
           var targetButton = $(e.currentTarget);
-          console.log(data);
 
           if (data === 'OK') {
             // Success! 
@@ -41,6 +40,7 @@ $(function () {
             // Show undo button
             targetButton.parent().find('.undo_button').show();
           } else {
+            // Add some kind of failure notification
             console.log(data);
           }
         }
@@ -62,7 +62,6 @@ $(function () {
         },
         function (data) {
           var targetButton = $(e.currentTarget);
-          console.log(data);
 
           if (data === 'OK') {
             targetButton.parent().find('p').remove();
@@ -113,7 +112,6 @@ $(function () {
   } else if (document.location.pathname === '/reports/roster') {
     $('#roster_form').submit(function (e) {
       var classroom_id = $('#class_id').val();
-      console.log(classroom_id);
 
       window.open('/reports/roster_printout?classroom_id=' + classroom_id); 
 
