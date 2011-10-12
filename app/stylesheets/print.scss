@@ -26,6 +26,10 @@
     }
 
     tbody {
+      tr > td {
+        margin: 0;
+        padding: 0;
+      }
       tr > td:nth-child(2) {
         text-align: right;
       }
