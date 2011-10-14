@@ -82,7 +82,7 @@ class ReportsController < ApplicationController
     unless params[:classroom_id].nil?
       classroom_id = params[:classroom_id]
 
-      @children = Child.where("classroom_id = ? AND inactive = ?", classroom_id, false)
+      @children = Child.where("classroom_id = ? AND inactive = ?", classroom_id, false).order(:first_name, :last_name)
       @classroom_name = Classroom.find(classroom_id).name
     end
 
