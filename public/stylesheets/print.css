@@ -4,50 +4,49 @@
 }
 /* line 4, ../../app/stylesheets/print.scss */
 .roster_printout table {
-  cellspacing: 0;
   width: 700px;
   margin: 20px auto;
 }
-/* line 9, ../../app/stylesheets/print.scss */
+/* line 8, ../../app/stylesheets/print.scss */
 .roster_printout table thead h1, .roster_printout table thead h2 {
   font-family: Helvetica, Arial, sans-serif;
 }
-/* line 12, ../../app/stylesheets/print.scss */
+/* line 11, ../../app/stylesheets/print.scss */
 .roster_printout table thead h2 {
   font-size: 1.6em;
   line-height: 2.0em;
 }
-/* line 18, ../../app/stylesheets/print.scss */
+/* line 17, ../../app/stylesheets/print.scss */
 .roster_printout table thead .title_row h1, .roster_printout table thead .title_row h2 {
   text-align: center;
 }
-/* line 21, ../../app/stylesheets/print.scss */
+/* line 20, ../../app/stylesheets/print.scss */
 .roster_printout table thead .title_row th {
   padding: 6px;
 }
-/* line 26, ../../app/stylesheets/print.scss */
+/* line 25, ../../app/stylesheets/print.scss */
 .roster_printout table thead .date_row {
   font-weight: bold;
 }
-/* line 30, ../../app/stylesheets/print.scss */
+/* line 29, ../../app/stylesheets/print.scss */
 .roster_printout table tbody tr > td {
   margin: 0;
   padding: 0;
 }
-/* line 34, ../../app/stylesheets/print.scss */
+/* line 33, ../../app/stylesheets/print.scss */
 .roster_printout table tbody tr > td:nth-child(2) {
   text-align: right;
 }
-/* line 37, ../../app/stylesheets/print.scss */
+/* line 36, ../../app/stylesheets/print.scss */
 .roster_printout table tbody .header_row > td {
   font-weight: bold;
   text-align: center;
 }
-/* line 41, ../../app/stylesheets/print.scss */
+/* line 40, ../../app/stylesheets/print.scss */
 .roster_printout table tbody .header_row > td:nth-child(1) {
   text-align: left;
 }
-/* line 42, ../../app/stylesheets/print.scss */
+/* line 41, ../../app/stylesheets/print.scss */
 .roster_printout table tbody td {
   border: 1px solid #000;
 }
