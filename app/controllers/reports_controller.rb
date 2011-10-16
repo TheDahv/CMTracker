@@ -32,6 +32,17 @@ class ReportsController < ApplicationController
             order("date_trunc('day', services.service_date)")
         end
 
+        # Add Saturday attendance values to Sunday values
+        @attendances.each_with_index do |a, i|
+          if a.service_date.to_date.wday == 6 and i + 1 < @attendances.count
+            # if this day is Saturday, add the count to Sunday
+            @attendances[i + 1].count += a.count
+          end
+        end
+
+        # Filter out the Saturdays
+        @attendances = @attendances.select { |a| a.service_date.to_date.wday != 6 }
+        
         @h = HighChart.new('graph') do |f| 
           f.title({:text => 'Attendances'})
           f.chart(
