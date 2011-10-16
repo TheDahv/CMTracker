@@ -36,7 +36,7 @@ class ReportsController < ApplicationController
         @attendances.each_with_index do |a, i|
           if a.service_date.to_date.wday == 6 
             # if this day is Saturday, add the count to Sunday
-            @attendances[i + 1].count += a.count if ((i + 1) < (@attendances.count)
+            @attendances[i + 1].count += a.count if ((i + 1) < (@attendances.count))
           end
         end
 
