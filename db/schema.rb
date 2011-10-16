@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110925175425) do
+ActiveRecord::Schema.define(:version => 20111016170015) do
 
   create_table "attendances", :force => true do |t|
     t.integer  "service_id"
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(:version => 20110925175425) do
     t.text     "notes"
     t.boolean  "inactive",   :default => false
     t.boolean  "onthecity"
+    t.boolean  "visitor",    :default => false
   end
 
   create_table "rails_admin_histories", :force => true do |t|
