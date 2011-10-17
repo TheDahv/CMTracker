@@ -32,16 +32,22 @@ class ReportsController < ApplicationController
             order("date_trunc('day', services.service_date)")
         end
 
+        # Turn all count values back into numbers and dates into dates
+        @attendances.each do |a| 
+          a.service_date = a.service_date.to_date
+          a.count = a.count.to_i
+        end
+
         # Add Saturday attendance values to Sunday values
         @attendances.each_with_index do |a, i|
-          if a.service_date.to_date.wday == 6 
+          if a.service_date.wday == 6 
             # if this day is Saturday, add the count to Sunday
             @attendances[i + 1].count += a.count if ((i + 1) < (@attendances.length))
           end
         end
 
         # Filter out the Saturdays
-        @attendances = @attendances.select { |a| a.service_date.to_date.wday != 6 }
+        @attendances = @attendances.select { |a| a.service_date.wday != 6 }
         
         @h = HighChart.new('graph') do |f| 
           f.title({:text => 'Attendances'})
@@ -51,7 +57,7 @@ class ReportsController < ApplicationController
           )
 
           f.x_axis(
-            :categories => @attendances.map { |a| a.service_date.to_date.strftime("%m/%d/%Y") },
+            :categories => @attendances.map { |a| a.service_date.strftime("%m/%d/%Y") },
             :labels => { :rotation => 90 } 
           )
 
@@ -62,7 +68,7 @@ class ReportsController < ApplicationController
          
           f.series(
             :name => 'Attendances', 
-            :data => @attendances.map { |a| [a.service_date.to_date.strftime("%m/%d/%Y"), a.count ] } 
+            :data => @attendances.map { |a| [a.service_date.strftime("%m/%d/%Y"), a.count ] } 
           )
         end 
 
