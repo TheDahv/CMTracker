@@ -63,7 +63,7 @@ class ReportsController < ApplicationController
 
           f.y_axis(
             :min => 0,
-            :max => 80
+            :max => 100
           )
          
           f.series(
