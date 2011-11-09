@@ -21,4 +21,13 @@ class Child < ActiveRecord::Base
 
     now.year - dob.year - ((now.month > dob.month || (now.month == dob.month && now.day >= dob.day)) ? 0 : 1)
   end
+
+  # Returns the first recorded attendance for this child
+  def first_day
+    if self.attendances.count > 0
+      Service.find(self.attendances.sort_by {|a| a.service_id}[0].service_id).service_date
+    else
+      nil
+    end
+  end
 end
