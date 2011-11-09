@@ -3,7 +3,7 @@ class Child < ActiveRecord::Base
   belongs_to :classroom
   has_many :attendances
 
-  attr_reader :age
+  attr_reader :age, :first_day, :most_recent_day
 
   def to_s
     "#{ first_name } #{ last_name }"    
@@ -22,17 +22,18 @@ class Child < ActiveRecord::Base
     now.year - dob.year - ((now.month > dob.month || (now.month == dob.month && now.day >= dob.day)) ? 0 : 1)
   end
 
-  # Returns the first recorded attendance for this child
+  # Returns the first recorded attendance date for this child
   def first_day
-    if self.attendances.count > 0
+    if self.attendances.any? 
       Service.find(self.attendances.map {|a| a.service_id }).min_by { |s| s.service_date }.service_date
     else
       nil
     end
   end
 
+  # Returns the most recently recorded attendance date for this child
   def most_recent_day
-    if self.attendances.count > 0
+    if self.attendances.any? 
       Service.find(self.attendances.map { |a| a.service_id }).max_by { |s| s.service_date }.service_date 
     else
       nil
