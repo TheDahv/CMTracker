@@ -30,4 +30,12 @@ class Child < ActiveRecord::Base
       nil
     end
   end
+
+  def most_recent_day
+    if self.attendances.count > 0
+      Service.find(self.attendances.sort_by {|a| a.service_id}.reverse[0].service_id).service_date
+    else
+      nil
+    end
+  end
 end
