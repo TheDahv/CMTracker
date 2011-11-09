@@ -1,22 +1,20 @@
 %h1 Listing children
 
-%table
+%table.child_list_table
   %tr
-    %th First name
-    %th Last name
+    %th Name
     %th Birthday
-    %th
-    %th
-    %th
+    %th First Day
+    %th Most Recent Day
+    %th Classroom
 
   - @children.each do |child|
     %tr
-      %td= child.first_name
-      %td= child.last_name
+      %td= link_to child.to_s, child
       %td= child.birthday
-      %td= link_to 'Show', child
-      %td= link_to 'Edit', edit_child_path(child)
-      %td= link_to 'Destroy', child, :confirm => 'Are you sure?', :method => :delete
+      %td= child.first_day
+      %td= child.most_recent_day
+      %td= child.classroom.name
 
 %br
 

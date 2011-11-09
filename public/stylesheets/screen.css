@@ -168,15 +168,16 @@ header nav ul li {
 
 /* line 122, ../../app/stylesheets/screen.scss */
 .child_listing {
+  /* For use in checkin screens */
   padding: 20px 80px;
 }
-/* line 123, ../../app/stylesheets/screen.scss */
+/* line 124, ../../app/stylesheets/screen.scss */
 .child_listing input[type='text'] {
   width: 250px;
   margin-bottom: 20px;
   text-align: left;
 }
-/* line 130, ../../app/stylesheets/screen.scss */
+/* line 131, ../../app/stylesheets/screen.scss */
 .child_listing article {
   width: 220px;
   height: 100px;
@@ -187,21 +188,34 @@ header nav ul li {
   margin-top: 16px;
   text-align: left;
 }
-/* line 140, ../../app/stylesheets/screen.scss */
+/* line 141, ../../app/stylesheets/screen.scss */
 .child_listing article .field_heading {
   font-weight: bold;
 }
-/* line 144, ../../app/stylesheets/screen.scss */
+/* line 145, ../../app/stylesheets/screen.scss */
 .child_listing article input[type='button'] {
   float: right;
   margin-right: 4px;
 }
-/* line 149, ../../app/stylesheets/screen.scss */
+/* line 150, ../../app/stylesheets/screen.scss */
 .child_listing article .undo_button {
   display: none;
 }
 
-/* line 155, ../../app/stylesheets/screen.scss */
+/* line 156, ../../app/stylesheets/screen.scss */
+.child_list_table {
+  margin-top: 12px;
+}
+/* line 158, ../../app/stylesheets/screen.scss */
+.child_list_table td, .child_list_table th {
+  padding: 2px 12px;
+}
+/* line 159, ../../app/stylesheets/screen.scss */
+.child_list_table th {
+  font-weight: bold;
+}
+
+/* line 167, ../../app/stylesheets/screen.scss */
 .checked_in {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #f5eb3e));
   background-image: -webkit-linear-gradient(#ffffff, #f5eb3e);
@@ -211,64 +225,64 @@ header nav ul li {
   background-image: linear-gradient(#ffffff, #f5eb3e);
 }
 
-/* line 159, ../../app/stylesheets/screen.scss */
+/* line 171, ../../app/stylesheets/screen.scss */
 #chart {
   text-align: center;
 }
 
-/* line 163, ../../app/stylesheets/screen.scss */
+/* line 175, ../../app/stylesheets/screen.scss */
 #sign_in_area {
   text-align: center;
 }
-/* line 166, ../../app/stylesheets/screen.scss */
+/* line 178, ../../app/stylesheets/screen.scss */
 #sign_in_area h2 {
   text-align: center;
 }
 
-/* line 171, ../../app/stylesheets/screen.scss */
+/* line 183, ../../app/stylesheets/screen.scss */
 .roster_printout {
   text-align: center;
 }
-/* line 174, ../../app/stylesheets/screen.scss */
+/* line 186, ../../app/stylesheets/screen.scss */
 .roster_printout table {
   width: 700px;
   margin: 20px auto;
 }
-/* line 178, ../../app/stylesheets/screen.scss */
+/* line 190, ../../app/stylesheets/screen.scss */
 .roster_printout table thead h1, .roster_printout table thead h2 {
   font-family: Helvetica, Arial, sans-serif;
 }
-/* line 181, ../../app/stylesheets/screen.scss */
+/* line 193, ../../app/stylesheets/screen.scss */
 .roster_printout table thead h2 {
   font-size: 1.6em;
   line-height: 2.0em;
 }
-/* line 187, ../../app/stylesheets/screen.scss */
+/* line 199, ../../app/stylesheets/screen.scss */
 .roster_printout table thead .title_row h1, .roster_printout table thead .title_row h2 {
   text-align: center;
 }
-/* line 190, ../../app/stylesheets/screen.scss */
+/* line 202, ../../app/stylesheets/screen.scss */
 .roster_printout table thead .title_row th {
   padding: 6px;
 }
-/* line 195, ../../app/stylesheets/screen.scss */
+/* line 207, ../../app/stylesheets/screen.scss */
 .roster_printout table thead .date_row {
   font-weight: bold;
 }
-/* line 199, ../../app/stylesheets/screen.scss */
+/* line 211, ../../app/stylesheets/screen.scss */
 .roster_printout table tbody tr > td:nth-child(2) {
   text-align: right;
 }
-/* line 202, ../../app/stylesheets/screen.scss */
+/* line 214, ../../app/stylesheets/screen.scss */
 .roster_printout table tbody .header_row > td {
   font-weight: bold;
   text-align: center;
 }
-/* line 206, ../../app/stylesheets/screen.scss */
+/* line 218, ../../app/stylesheets/screen.scss */
 .roster_printout table tbody .header_row > td:nth-child(1) {
   text-align: left;
 }
-/* line 207, ../../app/stylesheets/screen.scss */
+/* line 219, ../../app/stylesheets/screen.scss */
 .roster_printout table tbody td {
   border: 1px solid #000;
 }

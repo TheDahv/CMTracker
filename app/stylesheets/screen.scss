@@ -120,6 +120,7 @@ header {
 }
 
 .child_listing {
+  /* For use in checkin screens */
   input[type='text'] {
     width: 250px;
     margin-bottom: 20px;
@@ -150,6 +151,17 @@ header {
       display: none;  
     }
   } 
+}
+
+.child_list_table {
+  margin-top: 12px;
+  td, th { padding: 2px 12px; }
+  th {
+    font-weight: bold;
+  }
+  
+  td { 
+  }
 }
 
 .checked_in {
