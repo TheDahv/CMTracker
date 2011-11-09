@@ -32,6 +32,8 @@ RailsAdmin.config do |config|
       field :birthday
       field :age
       field :classroom
+      field :first_day
+      field :most_recent_day
       field :notes
       field :inactive
     end
@@ -42,6 +44,8 @@ RailsAdmin.config do |config|
       field :birthday
       field :age
       field :classroom
+      field :first_day
+      field :most_recent_day
       field :notes
       field :inactive
     end

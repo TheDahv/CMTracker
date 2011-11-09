@@ -25,7 +25,7 @@ class Child < ActiveRecord::Base
   # Returns the first recorded attendance date for this child
   def first_day
     if self.attendances.any? 
-      Service.find(self.attendances.map {|a| a.service_id }).min_by { |s| s.service_date }.service_date
+      Service.find(self.attendances.map {|a| a.service_id }).min_by { |s| s.service_date }.service_date.to_date
     else
       nil
     end
@@ -34,7 +34,7 @@ class Child < ActiveRecord::Base
   # Returns the most recently recorded attendance date for this child
   def most_recent_day
     if self.attendances.any? 
-      Service.find(self.attendances.map { |a| a.service_id }).max_by { |s| s.service_date }.service_date 
+      Service.find(self.attendances.map { |a| a.service_id }).max_by { |s| s.service_date }.service_date.to_date
     else
       nil
     end
