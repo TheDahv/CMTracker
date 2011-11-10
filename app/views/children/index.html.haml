@@ -14,7 +14,7 @@
       %td= child.birthday
       %td= child.first_day
       %td= child.most_recent_day
-      %td= child.classroom.name
+      %td= child.classroom.name unless child.classroom == nil
 
 %br
 
