@@ -1,0 +1,12 @@
+= form_tag('/reports/checkins', :method => :get) do |f|
+  = select_tag :service_id, options_for_select(@services.map { |s| [ s.service_date.strftime("%B %d, %Y"), s.id]})
+  = submit_tag :get_checkins, :value => 'Get Checkins'
+
+- if defined? @chart_data
+  %table
+    - @chart_data.each do |service_id, attendances|
+      %tr
+        %td= @checkin_services.find { |s| s.id == service_id }.service_date.strftime("%A %I:%M %p - %B %d, %Y")
+      - attendances.each do |a|
+        %tr
+          %td= @children.find { |c| c.id == a.child_id }.to_s
