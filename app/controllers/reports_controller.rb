@@ -3,7 +3,7 @@ class ReportsController < ApplicationController
   before_filter :authenticate_volunteer!
 
   def index
-    @report_paths = ['attendances', 'roster']
+    @report_paths = ['attendances', 'roster', 'checkins']
 
     respond_to do |format|
       format.html
@@ -11,7 +11,7 @@ class ReportsController < ApplicationController
   end
 
   def attendances
-    if params.empty? == false
+    unless params.empty? 
       class_id = params[:class_id]
       start_date = Date.strptime(params[:start_date], "%m/%d/%Y") unless params[:start_date].nil?
       end_date = Date.strptime(params[:end_date], "%m/%d/%Y") unless params[:end_date].nil?
@@ -107,6 +107,28 @@ class ReportsController < ApplicationController
       format.html
     end
   end
+
+   def checkins
+     @services = Service.all.select { |s| s.service_date.wday == 0 and s.service_date.hour == 9 }
+
+     unless params[:service_id].nil?
+       # This is the 9am service
+       service_id = params[:service_id]
+
+       # We want statistics for all services in this weekend.
+       # We know there are a few services on this day and
+       # a Saturday service the night before
+       sunday_date = Service.find(service_id).service_date.advance(:hours => 12)
+       saturday_date = DateTime.civil(sunday_date.year, sunday_date.month, sunday_date.day - 1, 18)
+       @checkin_services = Service.where(:service_date => saturday_date..sunday_date)
+       @attendances = Attendance.where(:service_id => @checkin_services.map {|cs| cs.id })
+       @children = Child.find(@attendances.map { |a| a.child_id }.uniq)
+
+
+       @chart_data = @attendances.group_by { |a| a.service_id }
+     end
+     
+   end
 
   private
   def choose_layout
