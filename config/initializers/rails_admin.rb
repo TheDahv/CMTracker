@@ -1,3 +1,5 @@
+require "rails_admin/abstract_history"
+
 RailsAdmin.config do |config|
   # This setting is to keep things from slowing down in prod
   #config.reload_between_requests = false
@@ -50,4 +52,32 @@ RailsAdmin.config do |config|
       field :inactive
     end
   end
+end
+
+module RailsAdmin
+  class AbstractHistory
+    def self.create_history_item(message, object, abstract_model, user) ; end
+
+    def self.history_for_model(model, query, sort, sort_reverse, all, page = 1, per_page = RailsAdmin::Config::Sections::List.default_items_per_page || 20)
+      []
+    end
+
+    def self.history_for_object(model, object, query, sort, sort_reverse)
+      []
+    end
+
+    def self.history_for_month(month, year)
+      []
+    end
+    
+    def self.history_summaries(from, to)
+      []
+    end
+
+    def self.most_recent_history(name)
+      nil
+    end
+
+  end
+
 end
