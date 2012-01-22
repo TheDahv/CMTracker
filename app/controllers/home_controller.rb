@@ -18,7 +18,7 @@ class HomeController < ApplicationController
       @selected_service = service_id unless service_id.nil?
     end
 
-    @services = Service.where('service_date >= ?', Date.today)
+    @services = Service.all.sort_by { |s| s.service_date }
     @classrooms = Classroom.where("classrooms.name <> ?", 'All').order(:id)
 
     respond_to do |format|

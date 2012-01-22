@@ -3,6 +3,8 @@ $(function () {
       updateCheckinCounter;
 
   if (document.location.pathname === '/') {
+    $('select').chosen();
+
     updateCheckinCounter = function () {
       var count = $('.checked_in').length;
       $('#checkin_count').text(count + ' children checked in so far');
@@ -122,5 +124,7 @@ $(function () {
       e.preventDefault();
       e.stopPropagation();
     });
+  } else if (document.location.pathname === '/reports/checkins') {
+    $('#service_id').chosen();
   }
 });

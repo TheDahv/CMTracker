@@ -106,6 +106,10 @@ header {
   }
 }
 
+#service_id {
+  width: 300px;
+}
+
 #main {
   clear: left;
   @include padding-leader();
