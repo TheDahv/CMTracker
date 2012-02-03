@@ -17,9 +17,7 @@ class ReportsController < ApplicationController
       end_date = Date.strptime(params[:end_date], "%m/%d/%Y") unless params[:end_date].nil?
 
       unless class_id.nil? || start_date.nil? || end_date.nil? 
-        base_query = Attendance.select("date_trunc('day', services.service_date) as service_date, COUNT(service_id)").
-            joins("RIGHT OUTER JOIN services ON attendances.service_id = services.id INNER JOIN children ON children.id = attendances.child_id").
-            where('services.service_date' => start_date..end_date, 'children.inactive' => false)
+        base_query = Attendance.attendance_totals(start_date, end_date)
 
         if class_id.to_i == 5
           # Return attendances from all classes
@@ -27,9 +25,7 @@ class ReportsController < ApplicationController
           base_query = base_query.where(:classroom_id => class_id)
         end
 
-        @attendances = base_query.
-          group("date_trunc('day', services.service_date)").
-          order("date_trunc('day', services.service_date)")
+        @attendances = base_query
 
         # Turn all count values back into numbers and dates into dates
         @attendances.each do |a| 
