@@ -14,3 +14,13 @@ gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git', :branch =>
 gem 'jquery-rails', '>= 1.0.12'
 
 gem 'rails_highcharts', '~> 0.0.3'
+
+group :development do
+  gem 'rspec-rails', '2.8.1'
+  gem 'annotate', '~> 2.4.1beta'
+end
+
+group :test do
+  gem 'rspec-rails', '2.8.1'
+  gem 'capybara', '1.1.2'
+end
