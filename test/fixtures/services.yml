@@ -5,3 +5,13 @@ one:
 
 two:
   service_date: 2011-08-29 19:26:26
+# == Schema Information
+#
+# Table name: services
+#
+#  id           :integer         not null, primary key
+#  service_date :datetime
+#  created_at   :datetime
+#  updated_at   :datetime
+#
+
