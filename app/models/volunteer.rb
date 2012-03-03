@@ -1,12 +1,11 @@
 class Volunteer < ActiveRecord::Base
   belongs_to :classroom
 
-  # Include default devise modules. Others available are:
-  # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
+  # Devise modules
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :stretches => 10
 
-  # Setup accessible (or protected) attributes for your model
+  # Device accessible attributes
   attr_accessible :email, :password, :password_confirmation, :remember_me
 
   def to_s
