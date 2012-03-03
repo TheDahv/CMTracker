@@ -7,4 +7,8 @@ FactoryGirl.define do
     password_confirmation 'zeh-password'
     admin true
   end
+
+  factory :classroom do
+    name 'Classroom'
+  end
 end

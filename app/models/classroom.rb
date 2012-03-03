@@ -1,7 +1,5 @@
 class Classroom < ActiveRecord::Base
-  # Properties
-  # name - string: The display name of the classroom
-  # created/updated_at - DateTime
+  default_scope :conditions => {:active => true }
 
   has_many :children
   has_many :volunteers
@@ -13,7 +11,10 @@ class Classroom < ActiveRecord::Base
   def admin_label
     self[:name]
   end
-  
+
+  def active?
+    active
+  end
 end
 # == Schema Information
 #
@@ -23,5 +24,6 @@ end
 #  name       :string(255)
 #  created_at :datetime
 #  updated_at :datetime
+#  active     :boolean
 #
 
