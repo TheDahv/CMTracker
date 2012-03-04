@@ -18,7 +18,6 @@ describe "Home Page" do
     describe "classroom selector" do
       seed
       let(:classes) { Classroom.all.map { |c| c.name } }
-      puts Classroom.all.count
       it { should have_select('class_id', :options => classes) }
     end
   end

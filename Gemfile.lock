@@ -56,6 +56,7 @@ GEM
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
       sass (~> 3.1)
+    database_cleaner (0.7.1)
     devise (1.4.2)
       bcrypt-ruby (~> 2.1.2)
       orm_adapter (~> 0.0.3)
@@ -153,6 +154,7 @@ DEPENDENCIES
   annotate (~> 2.4.1beta)
   capybara (= 1.1.2)
   compass (>= 0.11.5)
+  database_cleaner (= 0.7.1)
   devise
   factory_girl_rails (= 1.4.0)
   fastercsv
