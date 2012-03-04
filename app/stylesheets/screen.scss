@@ -110,6 +110,10 @@ header {
   width: 300px;
 }
 
+#class_id {
+  width: 120px;
+}
+
 #main {
   clear: left;
   @include padding-leader();
