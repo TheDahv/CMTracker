@@ -32,3 +32,15 @@ class Attendance < ActiveRecord::Base
     order("date_trunc('day', services.service_date)")
   end
 end
+# == Schema Information
+#
+# Table name: attendances
+#
+#  id           :integer         not null, primary key
+#  service_id   :integer
+#  classroom_id :integer
+#  child_id     :integer
+#  created_at   :datetime
+#  updated_at   :datetime
+#
+
