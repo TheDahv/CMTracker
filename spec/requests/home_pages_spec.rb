@@ -10,7 +10,16 @@ describe "Home Page" do
   end
 
   describe "as signed in volunteer" do
-    before { sign_in(volunteer) }
+    before do
+      sign_in(volunteer)
+    end
     it { should have_selector('p', :text => 'Pick a class to list the students') }
+
+    describe "classroom selector" do
+      seed
+      let(:classes) { Classroom.all.map { |c| c.name } }
+      puts Classroom.all.count
+      it { should have_select('class_id', :options => classes) }
+    end
   end
 end
