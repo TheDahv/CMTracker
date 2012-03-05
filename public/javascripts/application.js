@@ -18,12 +18,13 @@ $(function () {
       var child_id, service_id, classroom_id;
       child_id = e.currentTarget.dataset['id'];
 
-      // service_id = $('#service_id').val();
-
       var qs = {};
       $.each(document.location.search.substring(1).split('&'), function (i, v) { qs[v.split('=')[0]] = v.split('=')[1]; });
       service_id = qs['service_id'];
-      classroom_id = $('#class_id').val();
+
+      // Get classroom_id from the button that got clicked
+      // classroom_id = $('#class_id').val();
+      classroom_id = e.currentTarget.dataset['classroom_id'];
 
       $.post('/processCheckin', 
         {

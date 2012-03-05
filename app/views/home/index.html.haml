@@ -28,7 +28,7 @@
           - if check_in_status
             %p 'Checked in'
           - else
-            %input.checkin_button{:type => :button, :value => 'check in', :data => { :id => c.id }}
+            %input.checkin_button{:type => :button, :value => 'check in', :data => { :id => c.id, :classroom_id => c.classroom_id }}
       %br{:style => 'clear: left;'}
 - else
   %p Pick a class to list the students and check them in

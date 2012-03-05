@@ -1,4 +1,6 @@
 class Child < ActiveRecord::Base
+  default_scope :order => [:first_name, :last_name]
+
   has_and_belongs_to_many :parents
   belongs_to :classroom
   has_many :attendances
@@ -54,4 +56,3 @@ end
 #  notes        :text
 #  inactive     :boolean         default(FALSE)
 #
-

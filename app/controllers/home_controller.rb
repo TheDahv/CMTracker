@@ -7,22 +7,25 @@ class HomeController < ApplicationController
       service_id = params[:service_id]
       
       unless classroom_id.nil? || service_id.nil?
-
-        @children = Child.
-          where(:classroom_id => classroom_id).
-          order(:first_name, :last_name)
-
-        @existing_attendance_children = Attendance.where(
-          :classroom_id => classroom_id,
-          :service_id => service_id
-          ).map { |a| a[:child_id] }
+        if classroom_id.to_i == Classroom.find_by_name('All').id
+          @children = Child.all
+          @existing_attendance_children = Service.find(service_id).
+            attendances.
+            map { |c| c.child_id }
+        else
+          @children = Child.where(:classroom_id => classroom_id)
+          @existing_attendance_children = Service.find(service_id).
+            attendances.
+            select { |a| a.classroom_id == classroom_id.to_i }.
+            map { |c| c.child_id }
+        end
       end
       @selected_class = classroom_id unless classroom_id.nil?
       @selected_service = service_id unless service_id.nil?
     end
 
     @services = Service.all.sort_by { |s| s.service_date }
-    @classrooms = Classroom.where("classrooms.name <> ?", 'All').order(:id)
+    @classrooms = Classroom.all
 
     respond_to do |format|
       response.headers['Cache-Control'] = 'no-cache';
