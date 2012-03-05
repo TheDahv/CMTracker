@@ -68,5 +68,21 @@ describe "Home Page" do
         end.should change(Attendance, :count).by(-1)
       end
     end
+
+  end
+
+  describe "admin tab" do
+    describe "when not an admin" do
+      let(:non_admin) { FactoryGirl.create(:volunteer, :admin => false) }
+      before { sign_in(non_admin) }
+      it { should_not have_selector('a', :text => 'admin') } 
+    end
+
+    describe "when an admin" do
+      before { sign_in(volunteer) }
+      it { should have_selector('a', :text => 'admin') }
+    end
+
   end
 end
+
