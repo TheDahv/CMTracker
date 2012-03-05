@@ -1,6 +1,8 @@
 class Service < ActiveRecord::Base
-  # Properties
-  # service_date - ActiveSupport::TimeWithZone
+  has_many :attendances
+  # Not ready to go yet
+  # has_many :checked_in_kids, :through => Attendance, :source => :child
+
   def to_s
     service_date.strftime("%A %I:%M %p -%m/%d/%y")  
   end

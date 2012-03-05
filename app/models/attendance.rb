@@ -10,11 +10,11 @@
 #  updated_at   :datetime
 #
 class Attendance < ActiveRecord::Base
-  has_one :service
-  has_one :classroom
-  has_one :child
+  belongs_to :service
+  belongs_to :classroom
+  belongs_to :child
 
-  validates_presence_of :service_id, :classroom_id, :child_id
+  validates_presence_of :service, :classroom, :child
 
   #
   # A query useful for counting attendances for each 

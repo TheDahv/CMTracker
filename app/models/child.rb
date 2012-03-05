@@ -1,13 +1,4 @@
 class Child < ActiveRecord::Base
-  # Properties
-  # first_name - string
-  # last_name - string
-  # birthday - Date
-  # classroom_id - int
-  # created/updated_at
-  # notes - string
-  # inactive - boolean
-
   has_and_belongs_to_many :parents
   belongs_to :classroom
   has_many :attendances
