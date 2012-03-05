@@ -2,12 +2,15 @@ class HomeController < ApplicationController
   before_filter :authenticate_volunteer!
 
   def index
-    if (params.empty? == false)
+    unless (params.empty?)
       classroom_id = params[:class_id]
       service_id = params[:service_id]
       
-      if classroom_id.nil? == false && service_id.nil? == false
-        @children = Child.where(:classroom_id => classroom_id).order(:first_name, :last_name)
+      unless classroom_id.nil? || service_id.nil?
+
+        @children = Child.
+          where(:classroom_id => classroom_id).
+          order(:first_name, :last_name)
 
         @existing_attendance_children = Attendance.where(
           :classroom_id => classroom_id,
@@ -32,14 +35,15 @@ class HomeController < ApplicationController
     classroom_id = params[:classroom_id] 
     child_id = params[:child_id]
 
-    if service_id.nil? || classroom_id.nil? || child_id.nil? ||
-        service_id.empty? || classroom_id.empty? || child_id.empty?
-      render :text => 'All fields required to process a checkin'
-    else
-      a = Attendance.new
-      a.service_id = service_id
-      a.classroom_id = classroom_id
-      a.child_id = child_id
+    unless service_id.nil? || classroom_id.nil? || child_id.nil? 
+      classroom = Classroom.find(classroom_id)
+      child = Child.find(child_id)
+      service = Service.find(service_id)
+
+      a = service.attendances.build(
+        :classroom => classroom,
+        :child => child
+      )
 
       response.headers['Cache-Control'] = 'no-cache';
       if a.save
@@ -47,8 +51,9 @@ class HomeController < ApplicationController
       else
         render :text => 'There were errors: #{ a.errors.to_a.join(", ")}'
       end
+    else
+      render :text => 'All fields required to process a checkin'
     end
-    
   end
 
   def undoCheckin
@@ -58,22 +63,20 @@ class HomeController < ApplicationController
 
     response.headers['Cache-Control'] = 'no-cache';
 
-    if service_id.nil? || classroom_id.nil? || child_id.nil? ||
-        service_id.empty? || classroom_id.empty? || child_id.empty?
-      render :text => 'All fields required to process a checkin'
-    else
+    unless service_id.nil? || classroom_id.nil? || child_id.nil?
       begin
-        a = Attendance.where(
-          :service_id => service_id,
-          :classroom_id => classroom_id,
-          :child_id => child_id
-        )[0]
+        Service.find(service_id).attendances.select do |attendance|
+          attendance.classroom_id == classroom_id.to_i and 
+          attendance.child_id == child_id.to_i
+        end.first.destroy
 
-        a.destroy
         render :text => 'OK'
-      rescue
+      rescue Exception => ex
+        puts ex
         render :text => 'There were errors: #{ a.errors.to_a.join(", ")}'
       end
+    else
+      render :text => 'All fields required to process a checkin'
     end
   end
 end
